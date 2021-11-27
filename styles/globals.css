@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
 
 html,
@@ -30,7 +31,11 @@ a {
   font-family: 'Bungee', cursive;
   line-height: 5.2rem;
 }
+.bold-fira {
+  font-family: 'Fira Sans';
+  line-height: 5.2rem;
 
+}
 @media all and (max-width: 62rem) {
   .bold {
     line-height:initial;
