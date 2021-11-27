@@ -33,6 +33,6 @@ a {
 
 @media all and (max-width: 62rem) {
   .bold {
-    line-height: 4rem;
+    line-height:initial;
   }
 }
