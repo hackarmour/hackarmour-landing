@@ -57,7 +57,7 @@ const Container = styled.div`
 const Heading = styled.h1 `
   font-size: 5rem;
   @media all and (max-width: 62rem) {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
   }
 `
 
