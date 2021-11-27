@@ -8,7 +8,7 @@ const Navbar = () => {
                 <Logo>
                     <img src="./logo.svg" alt="logo" />
                     <strong>
-                        HackArmour
+                       <code>HackArmour</code>
                     </strong>
                 </Logo>
                 <Links className="text-med">
