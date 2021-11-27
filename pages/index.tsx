@@ -13,12 +13,18 @@ const Home: NextPage = () => {
         <title>HackArmour</title>
         {/* TODO: Meta Tags */}
       </Head>
+      <motion.div initial="hidden" animate="visible" 
+        variants = {FadeInDown}
+        transition={{ duration: 0.3, }}
+        >
       <Navbar />
+
+      </motion.div>
       
       <Hero>
         <motion.div initial="hidden" animate="visible" 
         variants = {FadeInDown}
-        transition={{ duration: 0.5, }}
+        transition={{ duration: 0.3, }}
         >
           <Container>
             <Heading className="bold">

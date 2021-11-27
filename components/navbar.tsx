@@ -1,5 +1,6 @@
 import { SimpleGrid } from '@chakra-ui/react'
 import styled from '@emotion/styled'
+import { motion } from 'framer-motion'
 
 const Navbar = () => {
     return (
