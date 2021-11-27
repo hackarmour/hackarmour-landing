@@ -16,12 +16,12 @@ const Home: NextPage = () => {
       <Hero>
         <Container>
           <Heading className="bold">
-            Welcome To Our <br /> Community
+            Welcome To Our <Break /> Community
           </Heading>
-          <Break />
-          <Text className="text" fontSize={{lg: "3xl", sm: "1xl"}}>
+          <br />
+          <Description className="text">
           We collect resources and make cool projects related to infosec. <Break /> Currently building an Infosec search engine!
-          </Text>
+          </Description>
           <br />
           <Button
            className="text-med"
@@ -38,6 +38,7 @@ const Hero = styled.main`
   width: 100%;
   text-align: center;
   height: 90vh;
+  padding: 2.5%;
 `
 
 const Break = styled.br`
@@ -49,14 +50,21 @@ const Break = styled.br`
 const Container = styled.div`
   padding-top: 17vh;
   @media all and (max-width: 62rem) {
-    paddding-top: 1vh;
+    paddding-top: 1.1vh;
   }
 `
 
 const Heading = styled.h1 `
   font-size: 5rem;
   @media all and (max-width: 62rem) {
-    font-size: 2rem;
+    font-size: 3rem;
+  }
+`
+
+const Description = styled.p`
+  font-size: 1.9rem;
+  @media all and (max-width: 62rem) {
+    font-size: 1.45rem;
   }
 `
 
