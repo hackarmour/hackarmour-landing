@@ -1,5 +1,5 @@
 # HackArmour Landing Page
-The hackarmour landing page written in nextjs and typescript.
+The hackarmour landing page written in nextjs and typescript. Includes Our community and contribution guidelines and goals.
 
 ## Stack
 
