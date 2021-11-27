@@ -3,6 +3,8 @@ import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Navbar from '../components/navbar'
+import { motion } from 'framer-motion'
+import { FadeInDown } from "../animations"
 
 const Home: NextPage = () => {
   return (
@@ -12,23 +14,28 @@ const Home: NextPage = () => {
         {/* TODO: Meta Tags */}
       </Head>
       <Navbar />
-
+      
       <Hero>
-        <Container>
-          <Heading className="bold">
-            Welcome To <Break /> Hackarmour
-          </Heading>
-          <br />
-          <Description className="text">
-          We collect resources and make CTFs and cool projects related to infosec. <Break /> Currently building an Infosec search engine!
-          </Description>
-          <br />
-          <Button
-           className="text-med"
-           backgroundColor="blue.400"
-           fontSize="1xl"
-          >Learn More</Button>
-        </Container>
+        <motion.div initial="hidden" animate="visible" 
+        variants = {FadeInDown}
+        transition={{ duration: 0.5, }}
+        >
+          <Container>
+            <Heading className="bold">
+              Welcome To <Break /> Hackarmour
+            </Heading>
+            <br />
+            <Description className="text">
+              We collect resources and make CTFs and cool projects related to infosec. <Break /> Currently building an Infosec search engine!
+            </Description>
+            <br />
+            <Button
+              className="text-med"
+              backgroundColor="blue.400"
+              fontSize="1xl"
+            >Learn More</Button>
+          </Container>
+        </motion.div>
       </Hero>
     </div>
   )
@@ -54,7 +61,7 @@ const Container = styled.div`
   }
 `
 
-const Heading = styled.h1 `
+const Heading = styled.h1`
   font-size: 5rem;
   @media all and (max-width: 62rem) {
     font-size: 3rem;
