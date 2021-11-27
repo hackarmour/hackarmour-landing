@@ -20,7 +20,7 @@ const Home: NextPage = () => {
           </Heading>
           <br />
           <Description className="text">
-          We collect resources and make cool projects related to infosec. <Break /> Currently building an Infosec search engine!
+          We collect resources and make CTFs and cool projects related to infosec. <Break /> Currently building an Infosec search engine!
           </Description>
           <br />
           <Button
