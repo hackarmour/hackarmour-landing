@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       <Hero>
         <Container>
           <Heading className="bold">
-            Welcome To Our <Break /> Community
+            Welcome To <Break /> Hackarmour
           </Heading>
           <br />
           <Description className="text">
