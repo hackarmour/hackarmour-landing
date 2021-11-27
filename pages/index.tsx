@@ -63,7 +63,7 @@ const Break = styled.br`
 const Container = styled.div`
   padding-top: 17vh;
   @media all and (max-width: 62rem) {
-    paddding-top: 0.8vh;
+    paddding-top: 0.5vh;
   }
 `
 
@@ -77,7 +77,7 @@ const Heading = styled.h1`
 const Description = styled.p`
   font-size: 1.9rem;
   @media all and (max-width: 62rem) {
-    font-size: 1.4rem;
+    font-size: 1.28rem;
   }
 `
 
