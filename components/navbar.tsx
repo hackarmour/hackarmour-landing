@@ -1,13 +1,13 @@
 import { SimpleGrid } from '@chakra-ui/react'
 import styled from '@emotion/styled'
-import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const Navbar = () => {
     return (
         <Nav>
             <SimpleGrid columns={{sm: 1, lg: 3}} >
                 <Logo>
-                    <img src="./logo.svg" alt="logo" />
+                    <Image src="./logo.svg" alt="logo" />
                     <strong>
                        <code>HackArmour</code>
                     </strong>
