@@ -15,12 +15,12 @@ const Home: NextPage = () => {
 
       <Hero>
         <Container>
-          <Text fontSize={{ lg: "7xl", sm: "5xl" }} className="bold">
-            Welcome To Our  <br /> Community
-          </Text>
+          <Heading className="bold">
+            Welcome To Our <br /> Community
+          </Heading>
           <Break />
-          <Text className="text" fontSize={{lg: "3xl"}}>
-          We collect resources and make cool projects related to infosec. <br /> Currently building an Infosec search engine!
+          <Text className="text" fontSize={{lg: "3xl", sm: "1xl"}}>
+          We collect resources and make cool projects related to infosec. <Break /> Currently building an Infosec search engine!
           </Text>
           <br />
           <Button
@@ -50,6 +50,13 @@ const Container = styled.div`
   padding-top: 17vh;
   @media all and (max-width: 62rem) {
     paddding-top: 1vh;
+  }
+`
+
+const Heading = styled.h1 `
+  font-size: 5rem;
+  @media all and (max-width: 62rem) {
+    font-size: 2rem;
   }
 `
 
