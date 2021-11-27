@@ -50,7 +50,7 @@ const Break = styled.br`
 const Container = styled.div`
   padding-top: 17vh;
   @media all and (max-width: 62rem) {
-    paddding-top: 1.1vh;
+    paddding-top: 0.8vh;
   }
 `
 
