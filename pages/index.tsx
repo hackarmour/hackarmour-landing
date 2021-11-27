@@ -57,14 +57,14 @@ const Container = styled.div`
 const Heading = styled.h1 `
   font-size: 5rem;
   @media all and (max-width: 62rem) {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 `
 
 const Description = styled.p`
   font-size: 1.9rem;
   @media all and (max-width: 62rem) {
-    font-size: 1.45rem;
+    font-size: 1.47rem;
   }
 `
 
