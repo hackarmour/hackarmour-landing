@@ -16,17 +16,18 @@ const About: NextPage = () => {
       <Hero>
         <Container>
           <Heading className="bold-fira">
-          Lorem ipsum dolor sit amet
+            About Our Vision
           </Heading>
-          <br />
+          <Break />
           <Description className="text">
-          Lorem ipsum dolor sit amet, consectetur <Break />adipiscing elit.. 
+            We are aimed towards organizing all the infosec resources available <Break /> 
+            and bring more order in the tech comminity.
           </Description>
           <br />
           <Button
            className="text-med"
            backgroundColor= "#2D5BFF"
-           fontSize="1.5rem"
+           fontSize={{lg: "1.3rem", md: "1rem"}}
           >Contact Us</Button>
         </Container>
       </Hero>
@@ -48,17 +49,18 @@ const Break = styled.br`
 `
 
 const Container = styled.div`
-  padding-top: 1vh;
-  padding-left: 14rem;
+  width: 80%;
+  margin: auto;
+  padding-top: 5vh;
   @media all and (max-width: 62rem) {
-    paddding-top: 1.1vh;
+    text-align: center;
   }
 `
 
 const Heading = styled.h1 `
-  font-size: 5rem;
+  font-size: 4.5rem;
   @media all and (max-width: 62rem) {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 `
 
