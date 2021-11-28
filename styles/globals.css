@@ -28,9 +28,10 @@ a {
 
 
 .bold {
-  font-family: 'Bungee', cursive;
+  font-family: 'Bungee', monospace;
   line-height: 5.2rem;
 }
+
 .bold-fira {
   font-family: 'Fira Sans';
   line-height: 5.2rem;
