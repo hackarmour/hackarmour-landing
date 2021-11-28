@@ -6,7 +6,7 @@ const Navbar = () => {
         <Nav>
             <SimpleGrid columns={{sm: 1, lg: 3}} >
                 <Logo>
-                    <img src="/logo.svg" alt="logo" />
+                    <img src="./logo.svg" alt="logo" />
                     <strong>
                        <code>HackArmour</code>
                     </strong>
