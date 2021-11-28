@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { FadeInDown } from "../animations"
+import { FadeInDown } from '../animations'
 
 const Home: NextPage = () => {
   return (
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
               <Button
                 className="text-med"
                 backgroundColor="#2D5BFF"
-                fontSize="1xl"
+                fontSize={{ lg: "1.3rem", md: "1rem" }}
               >Learn More</Button>
             </Link>
           </Container>
