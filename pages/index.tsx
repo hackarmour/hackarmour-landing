@@ -3,8 +3,6 @@ import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Navbar from '../components/navbar'
-import { motion } from 'framer-motion'
-import { FadeInDown } from "../animations"
 
 const Home: NextPage = () => {
   return (
@@ -13,19 +11,9 @@ const Home: NextPage = () => {
         <title>HackArmour</title>
         {/* TODO: Meta Tags */}
       </Head>
-      <motion.div initial="hidden" animate="visible" 
-        variants = {FadeInDown}
-        transition={{ duration: 0.3, }}
-        >
       <Navbar />
-
-      </motion.div>
       
       <Hero>
-        <motion.div initial="hidden" animate="visible" 
-        variants = {FadeInDown}
-        transition={{ duration: 0.3, }}
-        >
           <Container>
             <Heading className="bold">
               Welcome To <Break /> Hackarmour
@@ -41,7 +29,6 @@ const Home: NextPage = () => {
               fontSize="1xl"
             >Learn More</Button>
           </Container>
-        </motion.div>
       </Hero>
     </div>
   )
