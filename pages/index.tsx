@@ -28,7 +28,7 @@ const Home: NextPage = () => {
             <br />
             <Button
               className="text-med"
-              backgroundColor="blue.400"
+              backgroundColor="#2D5BFF"
               fontSize="1xl"
             >Learn More</Button>
           </Container>

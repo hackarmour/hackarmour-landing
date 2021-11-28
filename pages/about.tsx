@@ -64,7 +64,7 @@ const Heading = styled.h1 `
 
 const Description = styled.p`
   font-size: 1.9rem;
-  color: red;
+  color: #e71235;
   @media all and (max-width: 62rem) {
     font-size: 1.47rem;
   }
