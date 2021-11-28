@@ -63,6 +63,10 @@ const Heading = styled.h1`
   @media all and (max-width: 62rem) {
     font-size: 3rem;
   }
+
+  @media all and (max-width: 23.5rem) {
+    font-size: 2.55rem;
+  }
 `
 
 const Description = styled.p`
