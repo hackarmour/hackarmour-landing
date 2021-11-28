@@ -1,27 +1,30 @@
 import { SimpleGrid } from '@chakra-ui/react'
 import styled from '@emotion/styled'
+import { FadeInDown } from '../animations'
 
 const Navbar = () => {
     return (
         <Nav>
-            <SimpleGrid columns={{sm: 1, lg: 3}} >
-                <Logo>
-                    <img src="./logo.svg" alt="logo" />
-                    <strong>
-                       <code>HackArmour</code>
-                    </strong>
-                </Logo>
-                <Links className="text-med">
-                    <SimpleGrid columns={3} spacing={10}>
-                        <a href="https://github.com/hackarmour">GitHub</a>
-                        <a>Community</a>
-                        <a>About</a>
-                    </SimpleGrid>
-                </Links>
-                <Discord href="https://discord.gg/xBq4QSmjMp" className="text-med">
-                    Discord
-                </Discord>
-            </SimpleGrid>
+            <FadeInDown>
+                <SimpleGrid columns={{ sm: 1, lg: 3 }} >
+                    <Logo>
+                        <img src="./logo.svg" alt="logo" />
+                        <strong>
+                            <code>HackArmour</code>
+                        </strong>
+                    </Logo>
+                    <Links className="text-med">
+                        <SimpleGrid columns={3} spacing={10}>
+                            <a href="https://github.com/hackarmour">GitHub</a>
+                            <a>Community</a>
+                            <a>About</a>
+                        </SimpleGrid>
+                    </Links>
+                    <Discord href="https://discord.gg/xBq4QSmjMp" className="text-med">
+                        Discord
+                    </Discord>
+                </SimpleGrid>
+            </FadeInDown>
         </Nav>
     )
 }

@@ -2,8 +2,8 @@ import { Button } from "@chakra-ui/react"
 import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
 import { FadeInDown } from "../animations"
-import Navbar from '../components/navbar'
 
 const Home: NextPage = () => {
   return (
@@ -12,9 +12,6 @@ const Home: NextPage = () => {
         <title>HackArmour</title>
         {/* TODO: Meta Tags */}
       </Head>
-      <FadeInDown>
-        <Navbar />
-      </FadeInDown>
       <Hero>
         <FadeInDown>
           <Container>
@@ -26,11 +23,13 @@ const Home: NextPage = () => {
               We collect resources and make CTFs and cool projects related to infosec. <Break /> Currently building an Infosec search engine!
             </Description>
             <br />
-            <Button
-              className="text-med"
-              backgroundColor="#2D5BFF"
-              fontSize="1xl"
-            >Learn More</Button>
+            <Link href="/about">
+              <Button
+                className="text-med"
+                backgroundColor="#2D5BFF"
+                fontSize="1xl"
+              >Learn More</Button>
+            </Link>
           </Container>
         </FadeInDown>
       </Hero>

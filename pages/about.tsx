@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { FadeInDown } from "../animations"
-import Navbar from '../components/navbar'
 
 const About: NextPage = () => {
   return (
@@ -12,7 +11,6 @@ const About: NextPage = () => {
         <title>About Us</title>
         {/* TODO: Meta Tags */}
       </Head>
-      <Navbar />
       <FadeInDown>
         <Hero>
           <Container>
