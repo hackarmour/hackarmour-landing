@@ -2,6 +2,7 @@ import { Button } from "@chakra-ui/react"
 import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { FadeInDown } from "../animations"
 import Navbar from '../components/navbar'
 
 const Home: NextPage = () => {
@@ -11,9 +12,11 @@ const Home: NextPage = () => {
         <title>HackArmour</title>
         {/* TODO: Meta Tags */}
       </Head>
-      <Navbar />
-      
+      <FadeInDown>
+        <Navbar />
+      </FadeInDown>
       <Hero>
+        <FadeInDown>
           <Container>
             <Heading className="bold">
               Welcome To <Break /> Hackarmour
@@ -29,6 +32,7 @@ const Home: NextPage = () => {
               fontSize="1xl"
             >Learn More</Button>
           </Container>
+        </FadeInDown>
       </Hero>
     </div>
   )

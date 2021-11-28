@@ -1,11 +1,11 @@
-export const FadeInDown: any = {
-    hidden: {
-        opacity: 0,
-        translateY: 2 + 'rem'
-    },
+import { keyframes } from "@chakra-ui/react"
+import styled from "@emotion/styled"
 
-    visible: {
-        opacity: 1,
-        translateY: 0 + 'rem'
-    }
-}
+const FadeInDownKey = keyframes`
+    from {opacity: 0; transform: translateY(2rem)}
+    to {opacity: 1; transform: translateY(0rem)}
+`
+export const FadeInDown = styled.div`
+    animation-duration: 0.45s;
+    animation-name: ${FadeInDownKey};
+`
