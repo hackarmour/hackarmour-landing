@@ -2,6 +2,7 @@ import { Button } from "@chakra-ui/react"
 import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { FadeInDown } from "../animations"
 import Navbar from '../components/navbar'
 
 const About: NextPage = () => {
@@ -12,33 +13,32 @@ const About: NextPage = () => {
         {/* TODO: Meta Tags */}
       </Head>
       <Navbar />
-
-      <Hero>
-        <Container>
-          <Heading className="bold-fira">
-            About Our Vision
-          </Heading>
-          <Break />
-          <Description className="text">
-            We are aimed towards organizing all the infosec resources available <Break /> 
-            and bring more order in the tech comminity.
-          </Description>
-          <br />
-          <Button
-           className="text-med"
-           backgroundColor= "#2D5BFF"
-           fontSize={{lg: "1.3rem", md: "1rem"}}
-          >Contact Us</Button>
-        </Container>
-      </Hero>
+      <FadeInDown>
+        <Hero>
+          <Container>
+            <Heading className="bold-fira">
+              About Our Vision
+            </Heading>
+            <Break />
+            <Description className="text">
+              We are aimed towards organizing all the infosec resources available <Break />
+              and bring more order in the tech comminity.
+            </Description>
+            <br />
+            <Button
+              className="text-med"
+              backgroundColor="#2D5BFF"
+              fontSize={{ lg: "1.3rem", md: "1rem" }}
+            >Contact Us</Button>
+          </Container>
+        </Hero>
+      </FadeInDown>
     </div>
   )
 }
 
 const Hero = styled.main`
   width: 100%;
-  text-align: left;
-  height: 167;
   padding: 2.5%;
 `
 
@@ -57,7 +57,7 @@ const Container = styled.div`
   }
 `
 
-const Heading = styled.h1 `
+const Heading = styled.h1`
   font-size: 4.5rem;
   @media all and (max-width: 62rem) {
     font-size: 3rem;
