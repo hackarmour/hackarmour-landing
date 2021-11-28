@@ -1,13 +1,12 @@
 import { SimpleGrid } from '@chakra-ui/react'
 import styled from '@emotion/styled'
-import Image from 'next/image'
 
 const Navbar = () => {
     return (
         <Nav>
             <SimpleGrid columns={{sm: 1, lg: 3}} >
                 <Logo>
-                    <Image src="/logo.svg" width={70} height={70} alt="logo" />
+                    <img src="/logo.svg" alt="logo" />
                     <strong>
                        <code>HackArmour</code>
                     </strong>
