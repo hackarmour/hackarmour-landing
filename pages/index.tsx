@@ -59,6 +59,7 @@ const Container = styled.div`
 
 const Heading = styled.h1`
   font-size: 5rem;
+  white-space: pre-wrap !important;
   @media all and (max-width: 62rem) {
     font-size: 3rem;
   }
@@ -70,6 +71,7 @@ const Heading = styled.h1`
 
 const Description = styled.p`
   font-size: 1.9rem;
+  white-space: pre-wrap !important;
   @media all and (max-width: 62rem) {
     font-size: 1.28rem;
   }
