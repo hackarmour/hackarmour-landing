@@ -1,6 +1,7 @@
 import { SimpleGrid } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import { FadeInDown } from '../animations'
+import Link from 'next/link'
 
 const Navbar = () => {
     return (
@@ -8,16 +9,18 @@ const Navbar = () => {
             <FadeInDown>
                 <SimpleGrid columns={{ sm: 1, lg: 3 }} >
                     <Logo>
-                        <img src="./logo.svg" alt="logo" />
-                        <strong>
-                            <code>HackArmour</code>
-                        </strong>
+                    <img src="./logo.svg" alt="logo" />
+                        <Link href="/">
+                            <strong>
+                               <code>HackArmour</code>
+                            </strong>
+                        </Link>
                     </Logo>
                     <Links className="text-med">
                         <SimpleGrid columns={3} spacing={10}>
                             <a href="https://github.com/hackarmour">GitHub</a>
                             <a>Community</a>
-                            <a>About</a>
+                            <Link href="/about">About</Link>
                         </SimpleGrid>
                     </Links>
                     <Discord href="https://discord.gg/xBq4QSmjMp" className="text-med">
@@ -55,6 +58,7 @@ const Logo = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 `
 
 
