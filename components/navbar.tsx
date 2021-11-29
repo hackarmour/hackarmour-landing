@@ -14,7 +14,7 @@ const Navbar = () => {
             changePath(url)
         }
         router.events.on('routeChangeStart', handleRouteChange)
-    }, [])
+    }, [router.asPath])
 
     let about = false
     let community = false
@@ -31,7 +31,7 @@ const Navbar = () => {
                 <SimpleGrid columns={{ sm: 1, lg: 3 }} >
                     <Logo>
                     <img src="./logo.svg" alt="logo" />
-                        <Link href="/">
+                        <Link href="/" passHref>
                             <strong>
                                <code>HackArmour</code>
                             </strong>
@@ -40,7 +40,7 @@ const Navbar = () => {
                     <Links className="text-med">
                         <SimpleGrid columns={3} spacing={10}>
                             <a href="https://github.com/hackarmour">GitHub</a>
-                            {about ? <u><Link href="/community">Community</Link></u> : <Link href="/community">Community</Link>}
+                            {community ? <u><Link href="/community">Community</Link></u> : <Link href="/community">Community</Link>}
                             {about ? <u><Link href="/about">About</Link></u> : <Link href="/about">About</Link>}
                         </SimpleGrid>
                     </Links>
