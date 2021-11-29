@@ -4,23 +4,22 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { FadeInDown } from '../animations'
 
-const About: NextPage = () => {
+const Community: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>About Us</title>
+        <title>Hackarmour Community Page</title>
         {/* TODO: Meta Tags */}
       </Head>
       <FadeInDown>
         <Hero>
           <Container>
             <Heading className="bold-fira">
-              About Our Vision
+              Our Community Page
             </Heading>
             <Break />
             <Description className="text">
-              We are aimed towards organizing all the infosec resources available <Break />
-              and bring more order in the tech comminity.
+              The community and contribution guidelines, and staff information.
             </Description>
             <br />
             <Button
@@ -71,4 +70,4 @@ const Description = styled.p`
   }
 `
 
-export default About
+export default Community
