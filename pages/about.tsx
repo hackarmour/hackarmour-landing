@@ -52,6 +52,7 @@ const Container = styled.div`
   padding-top: 5vh;
   @media all and (max-width: 62rem) {
     text-align: center;
+    width: 100%;
   }
 `
 
