@@ -32,6 +32,6 @@ export const Description = styled.p`
   font-size: 1.9rem;
   color: #e71235;
   @media all and (max-width: 62rem) {
-    font-size: 1.47rem;
+    font-size: 1.3rem;
   }
 `

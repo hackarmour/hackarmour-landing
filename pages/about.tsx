@@ -1,5 +1,4 @@
 import { Button } from "@chakra-ui/react"
-import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { FadeInDown } from '../animations'
