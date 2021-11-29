@@ -1,8 +1,8 @@
 import { Button } from "@chakra-ui/react"
-import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { FadeInDown } from '../animations'
+import { Hero, Container, Heading, Break, Description } from '../styles/pageStyles'
 
 const Community: NextPage = () => {
   return (
@@ -33,41 +33,5 @@ const Community: NextPage = () => {
     </div>
   )
 }
-
-const Hero = styled.main`
-  width: 100%;
-  padding: 2.5%;
-`
-
-const Break = styled.br`
-  @media all and (max-width: 62rem) {
-    display: none;
-  }
-`
-
-const Container = styled.div`
-  width: 80%;
-  margin: auto;
-  padding-top: 5vh;
-  @media all and (max-width: 62rem) {
-    text-align: center;
-    width: 100%;
-  }
-`
-
-const Heading = styled.h1`
-  font-size: 4.5rem;
-  @media all and (max-width: 62rem) {
-    font-size: 3rem;
-  }
-`
-
-const Description = styled.p`
-  font-size: 1.9rem;
-  color: #e71235;
-  @media all and (max-width: 62rem) {
-    font-size: 1.47rem;
-  }
-`
 
 export default Community
