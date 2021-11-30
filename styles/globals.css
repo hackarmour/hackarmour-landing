@@ -35,8 +35,8 @@ a {
 .bold-fira {
   font-family: 'Fira Sans';
   font-weight: bold;
-  line-height: 5.2rem;
 }
+
 @media all and (max-width: 62rem) {
   .bold {
     line-height:initial;

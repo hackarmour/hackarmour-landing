@@ -14,7 +14,7 @@ const About: NextPage = () => {
       <Hero>
         <FadeInDown>
           <Container>
-            <Heading className="bold-fira">
+            <Heading className="bold-fira" style={{lineHeight: '3.87rem'}}>
               About Our Vision
             </Heading>
             <Break />
