@@ -11,16 +11,15 @@ const About: NextPage = () => {
         <title>About Us</title>
         {/* TODO: Meta Tags */}
       </Head>
-      <FadeInDown>
-        <Hero>
+      <Hero>
+        <FadeInDown>
           <Container>
             <Heading className="bold-fira">
               About Our Vision
             </Heading>
             <Break />
             <Description className="text">
-              We are aimed towards organizing all the infosec resources available <Break />
-              and bring more order in the tech comminity.
+              We are aimed towards organizing all the infosec resources available.
             </Description>
             <br />
             <Button
@@ -29,8 +28,8 @@ const About: NextPage = () => {
               fontSize={{ lg: "1.3rem", md: "1rem" }}
             >Contact Us</Button>
           </Container>
-        </Hero>
-      </FadeInDown>
+        </FadeInDown>
+      </Hero>
     </div>
   )
 }

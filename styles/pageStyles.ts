@@ -3,6 +3,10 @@ import styled from '@emotion/styled'
 export const Hero = styled.main`
   width: 100%;
   padding: 2.5%;
+  background-color: rgba(0, 0, 0, .3);
+  @media all and (max-width: 62rem) {
+    background-color: transparent;
+  }
 `
 
 export const Break = styled.br`

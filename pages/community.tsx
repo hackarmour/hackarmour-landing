@@ -11,8 +11,8 @@ const Community: NextPage = () => {
                 <title>Hackarmour Community Page</title>
                 {/* TODO: Meta Tags */}
             </Head>
-            <FadeInDown>
-                <Hero>
+            <Hero>
+                <FadeInDown>
                     <Container>
                         <Heading className="bold-fira">
                             Our Community Page
@@ -30,8 +30,8 @@ const Community: NextPage = () => {
                             > Join Discord</Button>
                         </a>
                     </Container>
-                </Hero>
-            </FadeInDown>
+                </FadeInDown>
+            </Hero>
         </div>
     )
 }
