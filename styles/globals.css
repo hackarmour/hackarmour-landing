@@ -14,8 +14,7 @@ a {
 }
 
 * {
-  box-sizing: border-box;
-  white-space: nowrap;
+  box-sizing: border-box; 
 }
 
 .text {
