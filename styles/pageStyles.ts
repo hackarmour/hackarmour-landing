@@ -39,3 +39,21 @@ export const Description = styled.p`
     font-size: 1.3rem;
   }
 `
+
+//  Content styles [left aligned headings and paras]
+
+export const Content = styled.main`
+  padding: 2%;
+  text-align: left;
+`
+
+export const Content_Heading = styled.h1`
+  font-size: 3rem;
+  @media all and (max-width: 62rem) {
+    font-size: 1.58rem;
+  }
+`
+
+export const Content_Description = styled.p`
+  font-size: 1.2rem;
+`
