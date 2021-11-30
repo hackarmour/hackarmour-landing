@@ -12,7 +12,8 @@ import {
     Contents,
     Content_Heading,
     Content_Description,
-    Content
+    Content,
+    List
 } from '../styles/pageStyles'
 
 const Community: NextPage = () => {
@@ -65,11 +66,15 @@ const Community: NextPage = () => {
                     </Content>
 
                     <Content>
-                    <Content_Heading className="bold-fira">Contribution Guidelines</Content_Heading>
-                    <br />
-                    <Content_Description>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odit expedita esse. Natus soluta expedita amet velit earum pariatur? Et sapiente earum quaerat mollitia minima corporis cupiditate dolorem eligendi quia?
-                    </Content_Description>
+                        <Content_Heading id="#contribution" className="bold-fira">Contribution Guidelines</Content_Heading>
+                        <br />
+                        <Content_Description>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odit expedita esse. Natus soluta expedita amet velit earum pariatur? Et sapiente earum quaerat mollitia minima corporis cupiditate dolorem eligendi quia?
+                            <List>
+                                <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </li>
+                                <li> Natus soluta expedita amet velit earum pariatur </li>
+                            </List>
+                        </Content_Description>
                     </Content>
                 </Contents>
             </FadeInDown>
