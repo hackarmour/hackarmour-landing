@@ -2,6 +2,7 @@ import { Button } from "@chakra-ui/react"
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { FadeInDown } from '../animations'
+import Footer from "../components/footer"
 import {
     Hero,
     Container,
@@ -72,6 +73,8 @@ const Community: NextPage = () => {
                     </Content>
                 </Contents>
             </FadeInDown>
+
+            <Footer />
         </div>
     )
 }
