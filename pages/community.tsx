@@ -27,7 +27,7 @@ const Community: NextPage = () => {
                 <FadeInDown>
                     <Container>
                         <Heading className="bold-fira" style={{ lineHeight: '4rem' }}>
-                            Our Community Page
+                            Our Community
                         </Heading>
                         <Break />
                         <Description className="text">
