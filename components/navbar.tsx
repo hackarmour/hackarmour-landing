@@ -1,4 +1,5 @@
-import { SimpleGrid } from '@chakra-ui/react'
+import { SimpleGrid, Menu, MenuButton, MenuList, MenuItem, IconButton } from '@chakra-ui/react'
+import { HamburgerIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import styled from '@emotion/styled'
 import { FadeInDown } from '../animations'
 import Link from 'next/link'
@@ -28,7 +29,7 @@ const Navbar = () => {
     return (
         <Nav>
             <FadeInDown>
-                <SimpleGrid columns={{ sm: 1, lg: 3 }} >
+                <SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} >
                     <Link href="/" passHref>
                         <Logo>
                             <img src="./logo.svg" alt="logo" />
@@ -47,6 +48,38 @@ const Navbar = () => {
                     <Discord href="https://discord.gg/xBq4QSmjMp" className="text-2">
                         Discord
                     </Discord>
+                    <MenuC>
+                        <Menu>
+                            <MenuButton
+                                as={IconButton}
+                                aria-label='Options'
+                                icon={<HamburgerIcon w={6} h={6} />}
+                            />
+
+                            <MenuList className="text-2">
+                                <Link href="/about">
+                                    <MenuItem>
+                                        About Us
+                                    </MenuItem>
+                                </Link>
+                                <Link href="/community">
+                                    <MenuItem>
+                                        Community
+                                    </MenuItem>
+                                </Link>
+                                <a href="https://github.com/hackarmour">
+                                    <MenuItem icon={<ExternalLinkIcon />}>
+                                        Github
+                                    </MenuItem>
+                                </a>
+                                <a href="https://discord.gg/xBq4QSmjMp">
+                                    <MenuItem icon={<ExternalLinkIcon />}>
+                                        Discord
+                                    </MenuItem>
+                                </a>
+                            </MenuList>
+                        </Menu>
+                    </MenuC>
                 </SimpleGrid>
             </FadeInDown>
         </Nav>
@@ -83,6 +116,17 @@ const Logo = styled.div`
     cursor: pointer;
 `
 
+const MenuC = styled.div`
+    display: flex;
+    justify-content: right;
+    margin-top: auto;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    @media all and (min-width: 62rem) {
+        display: none !important;
+    }
+`
 
 
 export default Navbar
