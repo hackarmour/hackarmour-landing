@@ -18,7 +18,7 @@ class MyDocument extends Document {
         <Head>
           <meta
             name="description"
-            content="Hackarmour is a community of hackers, devs and creative people who aim to create a community platform where everyone can learn tech stuff and mingle with the community accessibly."
+            content="Hackarmour is a community of hackers and devs who aim to make cybersecurity resources more accessible."
           />
           <meta name="title" content="Hack Armour | The hacker's service" />
           <link rel="icon" type="image/png" sizes="32x32" href="./logo.svg" />

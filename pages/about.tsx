@@ -9,7 +9,11 @@ const About: NextPage = () => {
     <div>
       <Head>
         <title>About Us</title>
-        {/* TODO: Meta Tags */}
+        <meta
+            name="description"
+            content="About hackarmour, hackarmour CTF and the infosec search engine."
+          />
+          <meta name="title" content="Hack Armour | About Us" />
       </Head>
       <Hero>
         <FadeInDown>
