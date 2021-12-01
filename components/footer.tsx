@@ -23,7 +23,7 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/company/hackarmour"><Icon src="./linkedin.svg" alt="linkedin" /></a>
             </FooterStyle>
             <br />
-            <a className="bold-fira" href="mailto:epicujjwal@protonmail.com">staff@hackarmour.tech</a>
+            <a className="bold-fira" href="mailto:staff@hackarmour.tech">staff@hackarmour.tech</a>
         </div>
     )
 }
