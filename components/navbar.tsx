@@ -37,14 +37,14 @@ const Navbar = () => {
                             </strong>
                         </Logo>
                     </Link>
-                    <Links className="text-med">
+                    <Links className="text-2">
                         <SimpleGrid columns={3} spacing={10}>
                             <a href="https://github.com/hackarmour">GitHub</a>
                             {community ? <u><Link href="/community">Community</Link></u> : <Link href="/community">Community</Link>}
                             {about ? <u><Link href="/about">About</Link></u> : <Link href="/about">About</Link>}
                         </SimpleGrid>
                     </Links>
-                    <Discord href="https://discord.gg/xBq4QSmjMp" className="text-med">
+                    <Discord href="https://discord.gg/xBq4QSmjMp" className="text-2">
                         Discord
                     </Discord>
                 </SimpleGrid>
@@ -60,6 +60,7 @@ const Nav = styled.nav`
 
 const Links = styled.div`
     text-align: center;
+    font-weight: bold;
     margin: auto;
     @media all and (max-width: 62rem) {
         display: none !important;

@@ -51,7 +51,7 @@ const Community: NextPage = () => {
                     <Content>
                         <Content_Heading className="bold-fira">Community Information</Content_Heading>
                         <br />
-                        <Content_Description>
+                        <Content_Description className="text-2">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla a recusandae, enim qui cupiditate laboriosam voluptas et in earum fugiat molestias illum laudantium tenetur. Quaerat tenetur quas placeat alias magni.
                             <br />
                             <br />
@@ -68,7 +68,7 @@ const Community: NextPage = () => {
                     <Content>
                         <Content_Heading id="#contribution" className="bold-fira">Contribution Guidelines</Content_Heading>
                         <br />
-                        <Content_Description>
+                        <Content_Description className="text-2">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odit expedita esse. Natus soluta expedita amet velit earum pariatur? Et sapiente earum quaerat mollitia minima corporis cupiditate dolorem eligendi quia?
                             <List>
                                 <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </li>
