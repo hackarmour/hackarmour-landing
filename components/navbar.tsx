@@ -58,19 +58,13 @@ const Navbar = () => {
 
                             <MenuList className="text-2">
                                 <Link href="/about">
-                                    <MenuItem>
-                                        About Us
-                                    </MenuItem>
+                                    <MenuItem isFocusable={false} >About Us</MenuItem>
                                 </Link>
                                 <Link href="/community">
-                                    <MenuItem>
-                                        Community
-                                    </MenuItem>
+                                    <MenuItem>Community</MenuItem>
                                 </Link>
                                 <a href="https://github.com/hackarmour">
-                                    <MenuItem icon={<ExternalLinkIcon />}>
-                                        Github
-                                    </MenuItem>
+                                    <MenuItem icon={<ExternalLinkIcon />}>Github</MenuItem>
                                 </a>
                                 <a href="https://discord.gg/xBq4QSmjMp">
                                     <MenuItem icon={<ExternalLinkIcon />}>

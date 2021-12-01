@@ -21,7 +21,10 @@ const Community: NextPage = () => {
         <div>
             <Head>
                 <title>Hackarmour Community Page</title>
-                {/* TODO: Meta Tags */}
+                <meta name="description"
+                    content="The community page of hackarmour, including contribution guidelines and staff information."
+                />
+                <meta name="title" content="Hack Armour | Community Page" />
             </Head>
             <Hero>
                 <FadeInDown>
