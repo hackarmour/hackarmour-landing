@@ -73,6 +73,7 @@ const Community: NextPage = () => {
                             <List>
                                 <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </li>
                                 <li> Natus soluta expedita amet velit earum pariatur </li>
+                                <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </li>
                             </List>
                         </Content_Description>
                     </Content>

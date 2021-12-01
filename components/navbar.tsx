@@ -18,7 +18,7 @@ const Navbar = () => {
 
     let about = false
     let community = false
-    
+
     if (path == '/about') {
         about = true
     } else if (path == '/community') {
@@ -29,14 +29,14 @@ const Navbar = () => {
         <Nav>
             <FadeInDown>
                 <SimpleGrid columns={{ sm: 1, lg: 3 }} >
-                    <Logo>
-                    <img src="./logo.svg" alt="logo" />
-                        <Link href="/" passHref>
+                    <Link href="/" passHref>
+                        <Logo>
+                            <img src="./logo.svg" alt="logo" />
                             <strong>
-                               <code>HackArmour</code>
+                                <code>HackArmour</code>
                             </strong>
-                        </Link>
-                    </Logo>
+                        </Logo>
+                    </Link>
                     <Links className="text-med">
                         <SimpleGrid columns={3} spacing={10}>
                             <a href="https://github.com/hackarmour">GitHub</a>
