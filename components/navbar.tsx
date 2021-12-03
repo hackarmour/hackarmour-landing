@@ -57,8 +57,11 @@ const Navbar = () => {
                             />
 
                             <MenuList className="text-2">
+                            <Link href="/">
+                                    <MenuItem>Home</MenuItem>
+                                </Link>
                                 <Link href="/about">
-                                    <MenuItem isFocusable={false} >About Us</MenuItem>
+                                    <MenuItem>About Us</MenuItem>
                                 </Link>
                                 <Link href="/community">
                                     <MenuItem>Community</MenuItem>
