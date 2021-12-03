@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Whyte";
-  src: url("../public/whyte.woff2")
+  src: url("https://devstaticasset.azureedge.net/font/ABCWhyte-Regular.woff2")
     format("woff2");
   font-style: normal;
   font-weight: 400;
