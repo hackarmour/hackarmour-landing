@@ -57,7 +57,7 @@ const Navbar = () => {
                             />
 
                             <MenuList className="text-2">
-                            <Link href="/">
+                                <Link href="/">
                                     <MenuItem>Home</MenuItem>
                                 </Link>
                                 <Link href="/about">

@@ -15,7 +15,7 @@ const Icon = styled.img`
 
 const Footer = () => {
     return (
-        <div id = "contact" style={{textAlign:'center', width: '100%', padding: 2.5 + 'rem'}}>
+        <div id="contact" style={{ textAlign: 'center', width: '100%', padding: 2.5 + 'rem' }}>
             <FooterStyle className="text">
                 <br />
                 <a href="https://twitter.com/thehackarmour"><Icon src="./twitter.svg" alt="twitter" /></a>

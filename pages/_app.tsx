@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import { ChakraProvider,  extendTheme, ThemeConfig } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme, ThemeConfig } from '@chakra-ui/react'
 import type { AppProps } from 'next/app'
 import Navbar from '../components/navbar'
 
@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ChakraProvider theme={theme}>
       <Navbar />
       <Component {...pageProps} />
-    </ChakraProvider>  )
+    </ChakraProvider>)
 }
 
 export default MyApp
