@@ -72,11 +72,11 @@ const Community: NextPage = () => {
                         <Content_Heading id="#contribution" className="bold-fira">Contribution Guidelines</Content_Heading>
                         <br />
                         <Content_Description className="text-2">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odit expedita esse. Natus soluta expedita amet velit earum pariatur? Et sapiente earum quaerat mollitia minima corporis cupiditate dolorem eligendi quia?
+                            These are the guidelines to be followed if you want to contribute to our projects. There might be special ones for each, so please refer to the readme of the particular project.
                             <List>
-                                <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </li>
-                                <li> Natus soluta expedita amet velit earum pariatur </li>
-                                <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit. </li>
+                                <li>Always before contributing, use the Issue Tracker to check about what you can improve in the project. You can also use it to file bugs and self assign it if you can fix them!</li>
+                                <li>Lint your project for potential bugs using the recommended linter before pushing the code. Guidelines could be found in the respective readme.</li>
+                                <li>Make sure the commit message is in present tense and helps to understand what feature is implemented and which section has been edited. For instance- <code>"nav: add homepage link"</code></li>
                             </List>
                         </Content_Description>
                     </Content>
