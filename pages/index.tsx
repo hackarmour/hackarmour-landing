@@ -23,7 +23,7 @@ const Home: NextPage = () => {
               We collect resources and make CTFs and cool projects related to infosec. <Break /> Currently building an Infosec search engine!
             </Description>
             <br />
-            <Link href="/about">
+            <Link passHref href="/about">
               <Button
                 className="text-med"
                 backgroundColor="#2D5BFF"

@@ -63,7 +63,7 @@ const Community: NextPage = () => {
                             </p>
                             <br />
                             <p>
-                                We are also working on a team based system where people can collaborate on their projects with people of different interests for instance the "malware team" may work on making malware based CTFs together. 
+                                We are also working on a team based system where people can collaborate on their projects with people of different interests for instance the &quot; malware team &quot; may work on making malware based CTFs together. 
                             </p>
                         </Content_Description>
                     </Content>
@@ -76,7 +76,7 @@ const Community: NextPage = () => {
                             <List>
                                 <li>Always before contributing, use the Issue Tracker to check about what you can improve in the project. You can also use it to file bugs and self assign it if you can fix them!</li>
                                 <li>Lint your project for potential bugs using the recommended linter before pushing the code. Guidelines could be found in the respective readme.</li>
-                                <li>Make sure the commit message is in present tense and helps to understand what feature is implemented and which section has been edited. For instance- <code>"nav: add homepage link"</code></li>
+                                <li>Make sure the commit message is in present tense and helps to understand what feature is implemented and which section has been edited. For instance- <code> &quot; nav: add homepage link &quot;</code></li>
                             </List>
                         </Content_Description>
                     </Content>

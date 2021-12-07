@@ -15,7 +15,7 @@ const Navbar = () => {
             changePath(url)
         }
         router.events.on('routeChangeStart', handleRouteChange)
-    }, [router.asPath])
+    }, [router.events, router.pathname])
 
     let about = false
     let community = false
@@ -57,13 +57,13 @@ const Navbar = () => {
                             />
 
                             <MenuList className="text-2">
-                                <Link href="/">
+                                <Link href="/" passHref>
                                     <MenuItem>Home</MenuItem>
                                 </Link>
-                                <Link href="/about">
+                                <Link href="/about" passHref>
                                     <MenuItem>About Us</MenuItem>
                                 </Link>
-                                <Link href="/community">
+                                <Link href="/community" passHref>
                                     <MenuItem>Community</MenuItem>
                                 </Link>
                                 <a href="https://github.com/hackarmour">
