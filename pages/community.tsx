@@ -55,15 +55,15 @@ const Community: NextPage = () => {
                         <Content_Heading className="bold-fira">Community Information</Content_Heading>
                         <br />
                         <Content_Description className="text-2">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla a recusandae, enim qui cupiditate laboriosam voluptas et in earum fugiat molestias illum laudantium tenetur. Quaerat tenetur quas placeat alias magni.
+                            Our community consists of hackers and developers. We work on making projects and CTFs and solving hacking challenges together. All of our projects are related to infosec and our community. We also believe in opensouce and lots of stuff we do could be found on our github page.
                             <br />
                             <br />
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores cum dolorum perspiciatis magni corrupti reiciendis error, repellendus nobis rem hic! Debitis repellendus quisquam animi dolorem sequi aliquid sapiente iusto molestiae.
+                                We have members from all over the globe. Hence, we strictly support the use of english as the language of communication and have rules and active moderators to make the chat well moderated, inclusive and friendly to everyone. 
                             </p>
                             <br />
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt error eligendi voluptatibus quis! Veniam possimus ratione autem maiores delectus, similique aut eaque perspiciatis iusto alias ullam atque neque repellendus fuga.
+                                We are also working on a team based system where people can collaborate on their projects with people of different interests for instance the "malware team" may work on making malware based CTFs together. 
                             </p>
                         </Content_Description>
                     </Content>
