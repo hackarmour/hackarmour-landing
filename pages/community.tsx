@@ -63,7 +63,7 @@ const Community: NextPage = () => {
                             </p>
                             <br />
                             <p>
-                                We are also working on a team based system where people can collaborate on their projects with people of different interests for instance the &quot; malware team &quot; may work on making malware based CTFs together. 
+                                We are also working on a team based system where people can collaborate on their projects with people of different interests for instance the &quot;malware team&quot; may work on making malware based CTFs together. 
                             </p>
                         </Content_Description>
                     </Content>
