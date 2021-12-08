@@ -10,7 +10,9 @@ The hackarmour landing page written in nextjs and typescript.
 5. emotion
 
 ## Contributing
-Contributions of all types are welcome, please follow the following guidelines if you want to involve- https://githuc.com/hackarmour#contribution-guidelines
+Contributions of all types are welcome, please follow the following guidelines if you want to involve- https://github.com/hackarmour#contribution-guidelines
+
+Lint your codebase with `npm run lint` before pushing. [Note: Images caching is not supported in production so you can ignore the `next/image` warning]
 
 ## Developers
 
