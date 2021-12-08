@@ -18,12 +18,12 @@ const Navbar = () => {
     }, [router.events, router.pathname])
 
     let about = false
-    let community = false
+    let ctf = false
 
     if (path == '/about') {
         about = true
-    } else if (path == '/community') {
-        community = true
+    } else if (path == '/ctf') {
+        ctf = true
     }
 
     return (
@@ -41,7 +41,7 @@ const Navbar = () => {
                     <Links className="text-2">
                         <SimpleGrid columns={3} spacing={10}>
                             <a href="https://github.com/hackarmour">GitHub</a>
-                            {community ? <u><Link href="/community">Community</Link></u> : <Link href="/community">Community</Link>}
+                            {ctf ? <u><Link href="/ctf">CTFs</Link></u> : <Link href="/ctf">CTFs</Link>}
                             {about ? <u><Link href="/about">About</Link></u> : <Link href="/about">About</Link>}
                         </SimpleGrid>
                     </Links>
@@ -63,8 +63,8 @@ const Navbar = () => {
                                 <Link href="/about" passHref>
                                     <MenuItem>About Us</MenuItem>
                                 </Link>
-                                <Link href="/community" passHref>
-                                    <MenuItem>Community</MenuItem>
+                                <Link href="/ctf" passHref>
+                                    <MenuItem>CTFs</MenuItem>
                                 </Link>
                                 <a href="https://github.com/hackarmour">
                                     <MenuItem icon={<ExternalLinkIcon />}>Github</MenuItem>
