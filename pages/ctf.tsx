@@ -2,12 +2,17 @@ import { Button } from "@chakra-ui/react"
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { FadeInDown } from '../animations'
+import Footer from "../components/footer"
 import {
     Hero,
     Container,
     Heading,
     Break,
     Description,
+    Contents,
+    Content,
+    Content_Heading,
+    Content_Description,
 } from '../styles/pageStyles'
 
 const Community: NextPage = () => {
@@ -28,7 +33,7 @@ const Community: NextPage = () => {
                         </Heading>
                         <Break />
                         <Description className="text">
-                            
+                            We love to make and host CTF challenges.
                         </Description>
                         <br />
                         <a href="https://discord.gg/xBq4QSmjMp">
@@ -41,6 +46,33 @@ const Community: NextPage = () => {
                     </Container>
                 </FadeInDown>
             </Hero>
+
+            <FadeInDown>
+                <Contents>
+                    <Content className="text-2">
+                        <Content_Heading className="bold-fira">Lorem Ipsum</Content_Heading>
+                        <Content_Description>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae doloremque, velit fuga asperiores quam assumenda ratione consectetur mollitia, temporibus veritatis ut odit accusantium tempora earum dignissimos totam, voluptates cum nam dolorem doloribus labore nihil repellendus! A non doloribus beatae perferendis vel inventore error accusantium exercitationem facilis sapiente. Maiores nihil ut beatae veritatis hic obcaecati commodi aut soluta iure provident ea ipsam atque laboriosam, sapiente dolore ex asperiores saepe doloremque eius?
+                        </Content_Description>
+                    </Content>
+
+                    <Content className="text-2">
+                        <Content_Heading className="bold-fira">Example Heading</Content_Heading>
+                        <Content_Description>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. assumenda ratione consectetur mollitia, temporibus veritatis ut odit accusantium tempora earum dignissimos totam, voluptates cum nam dolorem doloribus labore nihil repellendus! A non doloribus beatae perferendis vel inventore error accusantium exercitationem facilis sapiente. Maiores nihil ut beatae veritatis hic obcaecati commodi aut soluta iure provident ea ipsam atque laboriosam, sapiente dolore ex asperiores saepe doloremque eius?
+                        </Content_Description>
+                        <Content_Description style={{ padding: 2 + '%' }}>
+                            <ul>
+                                <li>dolor sit, amet consectetur adipisicing elit</li>
+                                <li>assumenda ratione consectetur mollitia</li>
+                                <li>tempora earum dignissimos totam,</li>
+                            </ul>
+                        </Content_Description>
+                    </Content>
+                </Contents>
+            </FadeInDown>
+
+            <Footer />
         </div>
     )
 }
