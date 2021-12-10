@@ -47,7 +47,11 @@ const Navbar = () => {
           </Link>
           <Links className="text-2">
             <SimpleGrid columns={3} spacing={10}>
-              <a href="https://github.com/hackarmour" target="_blank">
+              <a
+                href="https://github.com/hackarmour"
+                target="_blank"
+                rel="noreferrer"
+              >
                 GitHub
               </a>
               {ctf ? (
@@ -69,6 +73,7 @@ const Navbar = () => {
           <Discord
             href="https://discord.gg/xBq4QSmjMp"
             target="_blank"
+            rel="noreferrer"
             className="text-2"
           >
             Discord
@@ -91,10 +96,18 @@ const Navbar = () => {
                 <Link href="/ctf" passHref>
                   <MenuItem>CTFs</MenuItem>
                 </Link>
-                <a target="_blank" href="https://github.com/hackarmour">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/hackarmour"
+                >
                   <MenuItem icon={<ExternalLinkIcon />}>Github</MenuItem>
                 </a>
-                <a target="_blank" href="https://discord.gg/xBq4QSmjMp">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://discord.gg/xBq4QSmjMp"
+                >
                   <MenuItem icon={<ExternalLinkIcon />}>Discord</MenuItem>
                 </a>
               </MenuList>
