@@ -67,3 +67,17 @@ export const Content_Heading = styled.h1`
 export const Content_Description = styled.p`
   font-size: 1.3rem;
 `
+
+export const DisplayMobile = styled.div`
+  display: none;
+  @media all and (max-width: 800px) {
+    display: inline-block;
+  }
+`
+
+export const DisplayDesktop = styled.div`
+  display: inline-block;
+  @media all and (max-width: 800px) {
+    display: none;
+  }
+`

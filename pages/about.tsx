@@ -14,6 +14,8 @@ import {
   Content_Heading,
   Content,
   Contents,
+  DisplayDesktop,
+  DisplayMobile
 } from '../styles/pageStyles'
 
 const About: NextPage = () => {
@@ -72,26 +74,43 @@ const About: NextPage = () => {
               <MainImageGrid>
                 <img src="./ujjwal.png" alt="alt" />
               </MainImageGrid>
-
               <MainContentGrid>
-                  <MainStaffHeading className="text-2">@ujjwal-kr - Founder</MainStaffHeading>
-                  <Content_Description className="text-2">
-                    Lead of the Engineering and Product teams of the search engine and some opensource software released. Likes web dev, system programming and reverse engineering. 
-                  </Content_Description>
+                <MainStaffHeading className="text-2">@ujjwal-kr - Founder</MainStaffHeading>
+                <Content_Description className="text-2">
+                  Lead of the Engineering and Product teams of the search engine and some opensource software released. Likes web dev, system programming and reverse engineering.
+                </Content_Description>
               </MainContentGrid>
             </MainStaff>
 
-            <MainStaff>
-            <MainContentGrid>
+            <DisplayDesktop>
+              <MainStaff>
+                <MainContentGrid>
                   <MainStaffHeading className="text-2">@0xGamer - CEO</MainStaffHeading>
                   <Content_Description className="text-2">
-                    CEO, operations manager and Discord Admin. Organizer and challenge creator of CTFs, enjoys pentesting and pwning boxes.
+                    CEO, operations manager and Discord Admin. Organizer and challenge creator of CTFs and some infosec tools released, enjoys pentesting and pwning boxes.
                   </Content_Description>
-              </MainContentGrid>
-              <MainImageGrid>
-                <img src="./gamer.png" alt="alt" />
-              </MainImageGrid>
-            </MainStaff>
+                </MainContentGrid>
+                <MainImageGrid>
+                  <img src="./gamer.png" alt="alt" />
+                </MainImageGrid>
+              </MainStaff>
+            </DisplayDesktop>
+
+            <DisplayMobile>
+              <MainStaff>
+                <MainImageGrid>
+                  <img src="./gamer.png" alt="alt" />
+                </MainImageGrid>
+                <MainContentGrid>
+                  <MainStaffHeading className="text-2">@0xGamer - CEO</MainStaffHeading>
+                  <Content_Description className="text-2">
+                    CEO, operations manager and Discord Admin. Organizer and challenge creator of CTFs and some infosec tools released, enjoys pentesting and pwning boxes.
+                  </Content_Description>
+                </MainContentGrid>
+              </MainStaff>
+            </DisplayMobile>
+
+
           </Content>
         </Contents>
       </FadeInDown>
@@ -101,10 +120,21 @@ const About: NextPage = () => {
 }
 
 const MainStaff = styled.div`
-  margin-top: 2rem;
+  margin-top: 3rem;
   width: 100%;
   display: flex;
-  padding: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  @media all and (max-width: 1300px) {
+    padding-right: 2%;
+    padding-left: 2%;
+    margin-top: 2rem;
+  }
+
+  @media all and (max-width: 800px) {
+    display: inline;
+    text-align: center;
+  }
 `
 
 const MainStaffHeading = styled.h1`
@@ -113,11 +143,22 @@ const MainStaffHeading = styled.h1`
 
 const MainImageGrid = styled.div`
   width: 30%;
+  @media all and (max-width: 800px) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 `
 
 const MainContentGrid = styled.div`
   margin: auto;
   width: 50%;
+  @media all and (max-width: 800px) {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 `
 
 export default About
