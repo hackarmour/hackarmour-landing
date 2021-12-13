@@ -1,4 +1,5 @@
 import { Button } from "@chakra-ui/react"
+import styled from "@emotion/styled"
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { FadeInDown } from '../animations'
@@ -60,11 +61,63 @@ const About: NextPage = () => {
               </p>
             </Content_Description>
           </Content>
+
+          <Content>
+            <Content_Heading className="bold-fira">Our Team</Content_Heading>
+            <Content_Description className="text-2">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut amet totam natus, consectetur quam excepturi delectus temporibus rem dolore dignissimos soluta nemo incidunt, inventore dolores maiores libero officiis accusamus ad hic magnam quia repellat voluptatibus beatae. Similique consequatur, quas rerum quasi autem, cupiditate, pariatur magnam sunt natus voluptate fugiat est.
+            </Content_Description>
+            <br />
+            <MainStaff>
+              <MainImageGrid>
+                <img src="./ujjwal.png" alt="alt" />
+              </MainImageGrid>
+
+              <MainContentGrid>
+                  <MainStaffHeading className="text-2">@ujjwal-kr - Founder</MainStaffHeading>
+                  <Content_Description className="text-2">
+                    Lead of the Engineering and Product teams of the search engine and some opensource software released. Likes web dev, system programming and reverse engineering. 
+                  </Content_Description>
+              </MainContentGrid>
+            </MainStaff>
+
+            <MainStaff>
+            <MainContentGrid>
+                  <MainStaffHeading className="text-2">@0xGamer - CEO</MainStaffHeading>
+                  <Content_Description className="text-2">
+                    CEO, operations manager and Discord Admin. Organizer and challenge creator of CTFs, enjoys pentesting and pwning boxes.
+                  </Content_Description>
+              </MainContentGrid>
+              <MainImageGrid>
+                <img src="./gamer.png" alt="alt" />
+              </MainImageGrid>
+            </MainStaff>
+          </Content>
         </Contents>
       </FadeInDown>
       <Footer />
     </div>
   )
 }
+
+const MainStaff = styled.div`
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  padding: 2%;
+`
+
+const MainStaffHeading = styled.h1`
+  font-size: 1.5rem;
+`
+
+const MainImageGrid = styled.div`
+  width: 30%;
+`
+
+const MainContentGrid = styled.div`
+  margin: auto;
+  width: 50%;
+`
 
 export default About
