@@ -15,8 +15,35 @@ import {
   Content,
   Contents,
   DisplayDesktop,
-  DisplayMobile
+  DisplayMobile,
 } from "../styles/pageStyles";
+
+const StaffImages = [
+  {
+    src: "/shadow.png",
+    username: "Shad0wMazt3r",
+  },
+  {
+    src: "/0xMrNight.jpg",
+    username: "0xMrNight",
+  },
+  {
+    src: "/itsmebirdie.png",
+    username: "itsmebirdie",
+  },
+  {
+    src: "/phantomknight.jpg",
+    username: "PhantomKnight287",
+  },
+  {
+    src: "/Emperor.png",
+    username: "TheEmperor342",
+  },
+  {
+    src:"/ujjwal.png",
+    username:"ujjwal-kr"
+  }
+];
 
 const About: NextPage = () => {
   return (
@@ -92,7 +119,7 @@ const About: NextPage = () => {
             <br />
             <MainStaff>
               <MainImageGrid>
-                <img src="./ujjwal.png" alt="alt" />
+                <img src="./staff/ujjwal.png" alt="alt" />
               </MainImageGrid>
               <MainContentGrid>
                 <MainStaffHeading className="text-2">
@@ -119,7 +146,7 @@ const About: NextPage = () => {
                   </Content_Description>
                 </MainContentGrid>
                 <MainImageGrid>
-                  <img src="./gamer.png" alt="alt" />
+                  <img src="./staff/gamer.png" alt="alt" />
                 </MainImageGrid>
               </MainStaff>
             </DisplayDesktop>
@@ -127,7 +154,7 @@ const About: NextPage = () => {
             <DisplayMobile>
               <MainStaff>
                 <MainImageGrid>
-                  <img src="./gamer.png" alt="alt" />
+                  <img src="./staff/gamer.png" alt="alt" />
                 </MainImageGrid>
                 <MainContentGrid>
                   <MainStaffHeading className="text-2">
@@ -159,24 +186,22 @@ const About: NextPage = () => {
                 columns={{ base: 2, lg: 3 }}
                 gap={{ base: 5, lg: 10 }}
               >
-                <a href="https://github.com/ujjwal-kr">
-                  <StaffImg src="./ujjwal.png" alt="staff" />
-                </a>{" "}
-                <a href="https://github.com/ujjwal-kr">
-                  <StaffImg src="./ujjwal.png" alt="staff" />
-                </a>{" "}
-                <a href="https://github.com/ujjwal-kr">
-                  <StaffImg src="./ujjwal.png" alt="staff" />
-                </a>{" "}
-                <a href="https://github.com/ujjwal-kr">
-                  <StaffImg src="./ujjwal.png" alt="staff" />
-                </a>{" "}
-                <a href="https://github.com/ujjwal-kr">
-                  <StaffImg src="./ujjwal.png" alt="staff" />
-                </a>{" "}
-                <a href="https://github.com/ujjwal-kr">
-                  <StaffImg src="./ujjwal.png" alt="staff" />
-                </a>{" "}
+                {StaffImages &&
+                  StaffImages.map((image, index) => {
+                    return (
+                      <a
+                        href={`https://github.com/${image.username}`}
+                        key={index}
+                        target="_blank"
+                        rel="norefferer"
+                      >
+                        <StaffImg
+                          src={`/staff/${image.src}`}
+                          alt={image.username}
+                        />
+                      </a>
+                    );
+                  })}
               </SimpleGrid>
             </div>
           </Content>
