@@ -193,7 +193,7 @@ const About: NextPage = () => {
                         href={`https://github.com/${image.username}`}
                         key={index}
                         target="_blank"
-                        rel="norefferer"
+                        rel="noreferrer"
                       >
                         <StaffImg
                           src={`/staff/${image.src}`}
