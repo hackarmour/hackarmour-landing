@@ -21,28 +21,33 @@ import {
 const StaffImages = [
   {
     src: "/shadow.png",
-    username: "Shad0wMazt3r",
+    githubUsername: "Shad0wMazt3r",
+    discordUsername: "Shadow",
   },
   {
     src: "/0xMrNight.jpg",
-    username: "0xMrNight",
+    githubUsername: "0xMrNight",
+    discordUsername: "0xMrNight",
   },
   {
     src: "/itsmebirdie.png",
-    username: "itsmebirdie",
+    githubUsername: "itsmebirdie",
+    discordUsername: "itsmebirdie",
   },
   {
     src: "/phantomknight.jpg",
-    username: "PhantomKnight287",
+    githubUsername: "PhantomKnight287",
+    discordUsername: "PHANTOM KNIGHT",
   },
   {
     src: "/Emperor.png",
-    username: "TheEmperor342",
+    githubUsername: "TheEmperor342",
+    discordUsername: "[ᴛʜᴇ ᴇᴍᴘᴇʀᴏʀ]",
   },
   {
-    src:"/ujjwal.png",
-    username:"ujjwal-kr"
-  }
+    src: "/ujjwal.png",
+    githubUsername: "ujjwal-kr",
+  },
 ];
 
 const About: NextPage = () => {
@@ -179,7 +184,7 @@ const About: NextPage = () => {
               style={{
                 width: "100%",
                 display: "flex",
-                justifyContent: "center"
+                justifyContent: "center",
               }}
             >
               <SimpleGrid
@@ -190,15 +195,24 @@ const About: NextPage = () => {
                   StaffImages.map((image, index) => {
                     return (
                       <a
-                        href={`https://github.com/${image.username}`}
+                        href={`https://github.com/${image.githubUsername}`}
                         key={index}
                         target="_blank"
                         rel="noreferrer"
                       >
                         <StaffImg
                           src={`/staff/${image.src}`}
-                          alt={image.username}
+                          alt={image.githubUsername}
                         />
+                        <p
+                          style={{
+                            fontFamily: "Fira Sans",
+                            marginTop: "1rem",
+                            fontWeight: "bold",
+                          }}
+                        >
+                          {image.discordUsername}
+                        </p>
                       </a>
                     );
                   })}
