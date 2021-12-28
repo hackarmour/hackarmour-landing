@@ -25,28 +25,24 @@ const StaffImages = [
     discordUsername: "Shadow",
   },
   {
-    src: "/0xMrNight.jpg",
+    src: "/mrknight.png",
     githubUsername: "0xMrNight",
     discordUsername: "0xMrNight",
   },
   {
-    src: "/itsmebirdie.png",
+    src: "/birdie.png",
     githubUsername: "itsmebirdie",
     discordUsername: "itsmebirdie",
   },
   {
-    src: "/phantomknight.jpg",
+    src: "/phantom.png",
     githubUsername: "PhantomKnight287",
     discordUsername: "PHANTOM KNIGHT",
   },
   {
-    src: "/Emperor.png",
+    src: "/emperor.png",
     githubUsername: "TheEmperor342",
     discordUsername: "[ᴛʜᴇ ᴇᴍᴘᴇʀᴏʀ]",
-  },
-  {
-    src: "/ujjwal.png",
-    githubUsername: "ujjwal-kr",
   },
 ];
 
@@ -255,6 +251,9 @@ const MainImageGrid = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
+    & img{
+      width:310px;
+    }
   }
 `;
 
