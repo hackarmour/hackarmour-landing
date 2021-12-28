@@ -22,27 +22,27 @@ const StaffImages = [
   {
     src: "/shadow.png",
     githubUsername: "Shad0wMazt3r",
-    discordUsername: "Shadow",
+    discordUsername: "ƉηѦ ł Shadow#5311",
   },
   {
     src: "/mrknight.png",
     githubUsername: "0xMrNight",
-    discordUsername: "0xMrNight",
+    discordUsername: "Mr Night#6181",
   },
   {
     src: "/birdie.png",
     githubUsername: "itsmebirdie",
-    discordUsername: "itsmebirdie",
+    discordUsername: "itsmebirdie#4557",
   },
   {
     src: "/phantom.png",
     githubUsername: "PhantomKnight287",
-    discordUsername: "PHANTOM KNIGHT",
+    discordUsername: "PHANTOM KNIGHT#9254",
   },
   {
     src: "/emperor.png",
     githubUsername: "TheEmperor342",
-    discordUsername: "[ᴛʜᴇ ᴇᴍᴘᴇʀᴏʀ]",
+    discordUsername: "[ᴛʜᴇ ᴇᴍᴘᴇʀᴏʀ]#5417",
   },
 ];
 
@@ -124,7 +124,13 @@ const About: NextPage = () => {
               </MainImageGrid>
               <MainContentGrid>
                 <MainStaffHeading className="text-2">
-                  @ujjwal-kr - Founder
+                  <a
+                    href="https://github.com/ujjwal-kr"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    @ujjwal-kr - Founder
+                  </a>
                 </MainStaffHeading>
                 <Content_Description className="text-2">
                   Lead of the Engineering and Product teams of the search engine
@@ -138,7 +144,13 @@ const About: NextPage = () => {
               <MainStaff>
                 <MainContentGrid>
                   <MainStaffHeading className="text-2">
-                    @0xGamer - CEO
+                    <a
+                      href="https://github.com/0xGamer"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      @0xGamer - CEO
+                    </a>
                   </MainStaffHeading>
                   <Content_Description className="text-2">
                     CEO, operations manager and Discord Admin. Organizer and
@@ -242,6 +254,9 @@ const MainStaff = styled.div`
 
 const MainStaffHeading = styled.h1`
   font-size: 1.5rem;
+  & a {
+    text-decoration: underline;
+  }
 `;
 
 const MainImageGrid = styled.div`
@@ -251,8 +266,8 @@ const MainImageGrid = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    & img{
-      width:310px;
+    & img {
+      width: 310px;
     }
   }
 `;
