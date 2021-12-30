@@ -25,7 +25,7 @@ const StaffImages = [
     discordUsername: "ƉηѦ ł Shadow#5311",
   },
   {
-    src: "/mrknight.png",
+    src: "/mrnight.png",
     githubUsername: "0xMrNight",
     discordUsername: "Mr Night#6181",
   },
