@@ -1,4 +1,4 @@
-import { Button, SimpleGrid } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -25,7 +25,7 @@ const StaffImages = [
     discordUsername: "ƉηѦ ł Shadow#5311",
   },
   {
-    src: "/mrknight.png",
+    src: "/mrnight.png",
     githubUsername: "0xMrNight",
     discordUsername: "Mr Night#6181",
   },
@@ -195,10 +195,7 @@ const About: NextPage = () => {
                 justifyContent: "center",
               }}
             >
-              <SimpleGrid
-                columns={{ base: 2, lg: 3 }}
-                gap={{ base: 5, lg: 10 }}
-              >
+              <StaffImageContainer>
                 {StaffImages &&
                   StaffImages.map((image, index) => {
                     return (
@@ -224,7 +221,7 @@ const About: NextPage = () => {
                       </a>
                     );
                   })}
-              </SimpleGrid>
+              </StaffImageContainer>
             </div>
           </Content>
         </Contents>
@@ -288,6 +285,18 @@ const StaffImg = styled.img`
   /* @media all and (max-width: 900px) {
     height: 8.6rem;
   } */
+`;
+
+const StaffImageContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  @media all and (max-width: 350px) {
+    gap: 1rem;
+  }
 `;
 
 export default About;
