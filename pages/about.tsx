@@ -93,16 +93,16 @@ const About: NextPage = () => {
               people can collaborate and help each other. Currently, we are
               picking up the best resources available on the internet to index
               for everyone. We are working on a search engine, which only
-              indexes cybersecurity content from different places like GitHub,
-              Reddit, CVEs, and exploits, aggregating all of them in one place.{" "}
+              indexes cybersecurity content like CVEs and exploits from different places 
+              such as GitHub, Reddit and ExpoitDB, aggregating all of them 
+              in one place.{" "}
               <br />
               <br />
               <p>
                 Our other goal is to make quality CTF challenges so our members
                 can have fun and learn with the community at the same time. We
                 are also aiming to make some teams where people can collaborate
-                on different projects for example the &quot;malware team&quot;
-                may work together in making malware-based challenges.
+                on different projects and hone their teamwork skills. 
               </p>
             </Content_Description>
           </Content>
