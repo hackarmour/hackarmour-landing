@@ -1,5 +1,5 @@
 # HackArmour Landing Page
-The hackarmour landing page written in nextjs and typescript. Includes our community and contribution guidelines and goals.
+The hackarmour landing page written in nextjs and typescript.
 
 ## Stack
 
@@ -10,7 +10,9 @@ The hackarmour landing page written in nextjs and typescript. Includes our commu
 5. emotion
 
 ## Contributing
-Contributions of all types are welcome, please follow the following guidelines if you want to involve- [Todo: write the guideline and link here]
+Contributions of all types are welcome, please follow the following guidelines if you want to involve- https://github.com/hackarmour#contribution-guidelines
+
+Lint your codebase with `npm run lint` before pushing. 
 
 ## Developers
 

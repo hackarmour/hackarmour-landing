@@ -2,9 +2,8 @@ import { Button } from "@chakra-ui/react"
 import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Navbar from '../components/navbar'
-import { motion } from 'framer-motion'
-import { FadeInDown } from "../animations"
+import Link from 'next/link'
+import { FadeInDown } from '../animations'
 
 const Home: NextPage = () => {
   return (
@@ -13,19 +12,8 @@ const Home: NextPage = () => {
         <title>HackArmour</title>
         {/* TODO: Meta Tags */}
       </Head>
-      <motion.div initial="hidden" animate="visible" 
-        variants = {FadeInDown}
-        transition={{ duration: 0.3, }}
-        >
-      <Navbar />
-
-      </motion.div>
-      
       <Hero>
-        <motion.div initial="hidden" animate="visible" 
-        variants = {FadeInDown}
-        transition={{ duration: 0.3, }}
-        >
+        <FadeInDown>
           <Container>
             <Heading className="bold">
               Welcome To <Break /> Hackarmour
@@ -35,13 +23,15 @@ const Home: NextPage = () => {
               We collect resources and make CTFs and cool projects related to infosec. <Break /> Currently building an Infosec search engine!
             </Description>
             <br />
-            <Button
-              className="text-med"
-              backgroundColor="blue.400"
-              fontSize="1xl"
-            >Learn More</Button>
+            <Link passHref href="/about">
+              <Button
+                className="text-med"
+                backgroundColor="#2D5BFF"
+                fontSize={{ lg: "1.3rem", md: "1rem" }}
+              >Learn More</Button>
+            </Link>
           </Container>
-        </motion.div>
+        </FadeInDown>
       </Hero>
     </div>
   )
@@ -69,13 +59,19 @@ const Container = styled.div`
 
 const Heading = styled.h1`
   font-size: 5rem;
+  white-space: pre-wrap !important;
   @media all and (max-width: 62rem) {
     font-size: 3rem;
+  }
+
+  @media all and (max-width: 23.5rem) {
+    font-size: 2.55rem;
   }
 `
 
 const Description = styled.p`
   font-size: 1.9rem;
+  white-space: pre-wrap !important;
   @media all and (max-width: 62rem) {
     font-size: 1.28rem;
   }

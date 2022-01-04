@@ -2,10 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
 
+@font-face {
+  font-family: "Whyte";
+  src: url("https://devstaticasset.azureedge.net/font/ABCWhyte-Regular.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -14,11 +24,15 @@ a {
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 .text {
   font-family: 'Quicksand', sans-serif;
+}
+
+.text-2 {
+  font-family: "Whyte", sans-serif;
 }
 
 .text-med {
@@ -28,14 +42,15 @@ a {
 
 
 .bold {
-  font-family: 'Bungee', cursive;
+  font-family: 'Bungee', monospace;
   line-height: 5.2rem;
 }
+
 .bold-fira {
   font-family: 'Fira Sans';
-  line-height: 5.2rem;
-
+  font-weight: bold;
 }
+
 @media all and (max-width: 62rem) {
   .bold {
     line-height:initial;
