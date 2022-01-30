@@ -34,7 +34,8 @@ export const Heading = styled.h1`
 
 export const Description = styled.p`
   font-size: 1.9rem;
-  color: #ff143b;
+  /*color: #ff143b;*/
+	color: #576a99;
   @media all and (max-width: 62rem) {
     font-size: 1.3rem;
   }
