@@ -110,12 +110,7 @@ const About: NextPage = () => {
           <Content>
             <Content_Heading className="bold-fira">Our Team</Content_Heading>
             <Content_Description className="text-2">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut amet
-              totam natus, consectetur quam excepturi delectus temporibus rem
-              dolore dignissimos soluta nemo incidunt, inventore dolores maiores
-              libero officiis accusamus ad hic magnam quia repellat voluptatibus
-              beatae. Similique consequatur, quas rerum quasi autem, cupiditate,
-              pariatur magnam sunt natus voluptate fugiat est.
+             We are students, cybersec enthusiasts and developers who believe in opensource and free distribution of knowledge and resources about the art of hacking. We are                  open to public contributions and welcome people who want to be a part of our team. All our guides and resources will be available to contribute on GitHub, and our                community is currently active on Discord. If you are an infosec aficionado and want to help us, feel free to contact us!
             </Content_Description>
             <br />
             <MainStaff>
