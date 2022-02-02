@@ -26,14 +26,11 @@ const Navbar = () => {
 
   let about = false;
   let ctf = false;
-	let assistant = false;
 
   if (path == "/about")
     about = true;
   else if (path == "/ctf")
     ctf = true;
-  else if (path == "/assistant") 
-		assistant = true;
 
   return (
     <Nav>
@@ -48,7 +45,7 @@ const Navbar = () => {
             </Logo>
           </Link>
           <Links className="text-2">
-            <SimpleGrid columns={4} spacing={1.2}>
+            <SimpleGrid columns={3} spacing={10}>
               <a
                 href="https://github.com/hackarmour"
                 target="_blank"
@@ -69,13 +66,6 @@ const Navbar = () => {
                 </u>
               ) : (
                 <Link href="/about">About</Link>
-              )}
-							{assistant ? (
-                <u>
-                  <Link href="/assistant">Assistant</Link>
-                </u>
-              ) : (
-                <Link href="/assistant">Assistant</Link>
               )}
             </SimpleGrid>
           </Links>
