@@ -95,9 +95,6 @@ const Navbar = () => {
                 <Link href="/ctf" passHref>
                   <MenuItem>CTFs</MenuItem>
                 </Link>
-								<Link href="/assistant" passHref>
-									<MenuItem>Assistant</MenuItem>
-								</Link>
                 <a
                   target="_blank"
                   rel="noreferrer"
