@@ -55,10 +55,10 @@ const Navbar = () => {
               </a>
               {ctf ? (
                 <u>
-                  <Link href="/ctf">CTFs</Link>
+                  <a href="https://ctftime.org/event/1622">CTFs</a>
                 </u>
               ) : (
-                <Link href="/ctf">CTFs</Link>
+                <a href="https://ctftime.org/event/1622">CTFs</a>
               )}
               {about ? (
                 <u>
@@ -92,9 +92,9 @@ const Navbar = () => {
                 <Link href="/about" passHref>
                   <MenuItem>About Us</MenuItem>
                 </Link>
-                <Link href="/ctf" passHref>
+                <a href="https://ctftime.org/event/1622">
                   <MenuItem>CTFs</MenuItem>
-                </Link>
+                </a>
                 <a
                   target="_blank"
                   rel="noreferrer"

@@ -148,8 +148,8 @@ const About: NextPage = () => {
                     </a>
                   </MainStaffHeading>
                   <Content_Description className="text-2">
-                    CEO, operations manager and Discord Admin. Organizer and
-                    challenge creator of CTFs and some infosec tools released,
+                    CEO, Operations and Community Manager. Organizer and
+                    Challenge creator of CTFs and some infosec tools released,
                     enjoys pentesting and pwning boxes.
                   </Content_Description>
                 </MainContentGrid>
