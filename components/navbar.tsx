@@ -27,10 +27,8 @@ const Navbar = () => {
   let about = false;
   let ctf = false;
 
-  if (path == "/about")
-    about = true;
-  else if (path == "/ctf")
-    ctf = true;
+  if (path == "/about") about = true;
+  else if (path == "/ctf") ctf = true;
 
   return (
     <Nav>
@@ -55,10 +53,22 @@ const Navbar = () => {
               </a>
               {ctf ? (
                 <u>
-                  <a href="https://ctftime.org/event/1622" target="_blank">CTFs</a>
+                  <a
+                    href="https://ctftime.org/event/1622"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    CTFs
+                  </a>
                 </u>
               ) : (
-                <a href="https://ctftime.org/event/1622" target="_blank">CTFs</a>
+                <a
+                  href="https://ctftime.org/event/1622"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  CTFs
+                </a>
               )}
               {about ? (
                 <u>
@@ -92,7 +102,11 @@ const Navbar = () => {
                 <Link href="/about" passHref>
                   <MenuItem>About Us</MenuItem>
                 </Link>
-                <a href="https://ctftime.org/event/1622" target="_blank">
+                <a
+                  href="https://ctftime.org/event/1622"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <MenuItem>CTFs</MenuItem>
                 </a>
                 <a
