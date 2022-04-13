@@ -64,7 +64,12 @@ export const Content_Heading = styled.h1`
     font-size: 2.3rem;
   }
 `
-
+export const Content_Heading_2 = styled.h2`
+  font-size: 2rem;
+  @media all and (max-width: 61rem) {
+    font-size: 1.3rem;
+  }
+`
 export const Content_Description = styled.p`
   font-size: 1.1rem;
 `
