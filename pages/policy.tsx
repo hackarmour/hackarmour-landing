@@ -123,13 +123,13 @@ const Policy: NextPage = () => {
               <p>
                 HackArmour follows a standard procedure of using log files.
                 These files log visitors when they visit websites. All hosting
-                companies do this and a part of hosting services' analytics. The
+                companies do this and a part of hosting services&apos; analytics. The
                 information collected by log files include internet protocol
                 (IP) addresses, browser type, Internet Service Provider (ISP),
                 date and time stamp, referring/exit pages, and possibly the
                 number of clicks. These are not linked to any information that
                 is personally identifiable. The purpose of the information is
-                for analyzing trends, administering the site, tracking users'
+                for analyzing trends, administering the site, tracking users&apos;
                 movement on the website, and gathering demographic information.
               </p>
               <br />
@@ -138,12 +138,12 @@ const Policy: NextPage = () => {
               </Content_Heading_2>
               <br />
               <p>
-                Like any other website, HackArmour uses 'cookies'. These cookies
-                are used to store information including visitors' preferences,
+                Like any other website, HackArmour uses &apos;cookies&apos;. These cookies
+                are used to store information including visitors&apos; preferences,
                 and the pages on the website that the visitor accessed or
-                visited. The information is used to optimize the users'
+                visited. The information is used to optimize the users&apos;
                 experience by customizing our web page content based on
-                visitors' browser type and/or other information.
+                visitors&apos; browser type and/or other information.
               </p>
               <br />
               <Content_Heading_2 className="bold-fira">
@@ -159,7 +159,7 @@ const Policy: NextPage = () => {
                 Third-party ad servers or ad networks uses technologies like
                 cookies, JavaScript, or Web Beacons that are used in their
                 respective advertisements and links that appear on HackArmour,
-                which are sent directly to users' browser. They automatically
+                which are sent directly to users&apos; browser. They automatically
                 receive your IP address when this occurs. These technologies are
                 used to measure the effectiveness of their advertising campaigns
                 and/or to personalize the advertising content that you see on
@@ -176,7 +176,7 @@ const Policy: NextPage = () => {
               </Content_Heading_2>
               <br />
               <p>
-                HackArmour's Privacy Policy does not apply to other advertisers
+                HackArmour&apos;s Privacy Policy does not apply to other advertisers
                 or websites. Thus, we are advising you to consult the respective
                 Privacy Policies of these third-party ad servers for more
                 detailed information. It may include their practices and
@@ -187,7 +187,7 @@ const Policy: NextPage = () => {
                 You can choose to disable cookies through your individual
                 browser options. To know more detailed information about cookie
                 management with specific web browsers, it can be found at the
-                browsers' respective websites.
+                browsers&apos; respective websites.
               </p>
               <br />
               <Content_Heading_2 className="bold-fira">
@@ -200,7 +200,7 @@ const Policy: NextPage = () => {
               </p>
               <br />
               <p>
-                Request that a business that collects a consumer's personal data
+                Request that a business that collects a consumer&apos;s personal data
                 disclose the categories and specific pieces of personal data
                 that a business has collected about consumers.
               </p>
@@ -211,8 +211,8 @@ const Policy: NextPage = () => {
               </p>
               <br />
               <p>
-                Request that a business that sells a consumer's personal data,
-                not sell the consumer's personal data.
+                Request that a business that sells a consumer&apos;s personal data,
+                not sell the consumer&apos;s personal data.
               </p>
               <br />
               <p>
@@ -275,7 +275,7 @@ const Policy: NextPage = () => {
               <br />
 
               <Content_Heading_2 className="bold-fira">
-                Children's Information
+                Children&apos;s Information
               </Content_Heading_2>
               <br />
               <p>
