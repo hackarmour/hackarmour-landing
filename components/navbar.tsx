@@ -107,7 +107,7 @@ const Navbar = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <MenuItem>CTFs</MenuItem>
+                  <MenuItem icon={<ExternalLinkIcon />}>CTF</MenuItem>
                 </a>
                 <a
                   target="_blank"
