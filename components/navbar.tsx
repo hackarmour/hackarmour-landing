@@ -80,7 +80,7 @@ const Navbar = () => {
             </SimpleGrid>
           </Links>
           <Discord
-            href="https://discord.gg/xBq4QSmjMp"
+            href="https://discord.gg/mxHtj8q3c4"
             target="_blank"
             rel="noreferrer"
             className="text-2"
@@ -119,7 +119,7 @@ const Navbar = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://discord.gg/xBq4QSmjMp"
+                  href="https://discord.gg/mxHtj8q3c4"
                 >
                   <MenuItem icon={<ExternalLinkIcon />}>Discord</MenuItem>
                 </a>
