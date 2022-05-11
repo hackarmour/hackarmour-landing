@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Heading } from "../styles/pageStyles.ts";
+import { Heading } from "../styles/pageStyles";
 import Link from "next/link";
 
 const Four0Four = () => {
