@@ -113,10 +113,7 @@ const ModalContainer = styled.div`
 	width: 50%;
 	padding: 1rem;
 	margin-top: 20vh;
-	@media (min-width: 570px) and (max-width: 767px) {
-		width: 70%;
-	}
-	@media (max-width: 400px) {
+	@media (max-width: 550px) {
 		width: 90%;
 	}
 	& form {
