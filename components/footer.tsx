@@ -1,31 +1,33 @@
-import styled from '@emotion/styled'
-
-const FooterStyle = styled.div`
-    align-items: center;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-`
-
-const Icon = styled.img`
-    margin: .5rem;
-    width: 40px;
-    height: 40px;
-`
+import { IconButton, Flex } from "@chakra-ui/react";
+import { FaGithub, FaLinkedin, FaNewspaper, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
-    return (
-        <div id="contact" style={{ textAlign: 'center', width: '100%', padding: 2.5 + 'rem' }}>
-            <FooterStyle className="text">
-                <br />
-                <a href="https://twitter.com/thehackarmour"><Icon src="./twitter.svg" alt="twitter" /></a>
-                <a href="https://github.com/hackarmour"><Icon src="./github.svg" alt="github" /></a>
-                <a href="https://www.linkedin.com/company/hackarmour"><Icon src="./linkedin.svg" alt="linkedin" /></a>
-            </FooterStyle>
-            <br />
-            <a className="bold-fira" href="mailto:staff@hackarmour.com">staff@hackarmour.com</a>
-        </div>
-    )
-}
+	return (
+		<div
+			id="contact"
+			style={{ textAlign: "center", width: "100%", padding: 2.5 + "rem" }}
+		>
+			<Flex alignItems="center" justifyContent="center" fontSize="1.2rem">
+				<br />
+				<a href="https://twitter.com/thehackarmour">
+					<IconButton aria-label="Twitter" icon={<FaTwitter />} mr="10px" />
+				</a>
+				<a href="https://github.com/hackarmour">
+					<IconButton aria-label="GitHub" icon={<FaGithub />} mr="10px" />
+				</a>
+				<a href="https://www.linkedin.com/company/hackarmour">
+					<IconButton aria-label="GitHub" icon={<FaLinkedin />} mr="10px" />
+				</a>
+				<a href="/newsletter">
+					<IconButton aria-label="Newsletter" icon={<FaNewspaper />} />
+				</a>
+			</Flex>
+			<br />
+			<a className="bold-fira" href="mailto:staff@hackarmour.com">
+				staff@hackarmour.com
+			</a>
+		</div>
+	);
+};
 
-export default Footer
+export default Footer;

@@ -9,5 +9,5 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_measurementId,
 };
 
-export const app = firebase.initializeApp(firebaseConfig);
+export const app = (!firebase.apps.length) ? firebase.initializeApp(firebaseConfig) : firebase.app();
 export const db = firebase.firestore(app)
