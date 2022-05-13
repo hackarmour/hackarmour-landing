@@ -81,12 +81,14 @@ export default function NewsLetter() {
           </Alert>
         )}
         <Flex alignItems="center" justifyContent="center">
-          <Flex alignItems="center" justifyContent="center" w="75vw">
-            <Image
-              src="./logo.svg"
-              w="15rem"
-              display={screenSize ? "none" : "block"}
-            />
+          <Flex alignItems="center" justifyContent="center" w="60vw">
+            <ImageContainer>
+              <Image
+                src="./ctf.png"
+                w="19.5rem"
+                display={screenSize ? "none" : "block"}
+              />
+            </ImageContainer>
             <Flex
               direction="column"
               alignItems="center"
@@ -94,9 +96,10 @@ export default function NewsLetter() {
             >
               <ModalContainer>
                 <h3
+                  className="bold-fira"
                   style={{
-                    fontWeight: "bold",
-                    fontSize: "1.4rem",
+                    fontWeight: "bolder",
+                    fontSize: "1.7rem",
                     textAlign: "center",
                     marginBottom: "10px",
                   }}
@@ -158,7 +161,12 @@ export default function NewsLetter() {
             </Flex>
           </Flex>
         </Flex>
-        <Text color="gray.400" w="100%" textAlign="center">
+        <Text
+          className="bold-fira"
+          color="gray.400"
+          w="100%"
+          textAlign="center"
+        >
           <b>Note</b>: You will only receive your CTF awards if you register
           here
         </Text>
@@ -186,5 +194,11 @@ const ModalContainer = styled.div`
     align-items: center;
     justify-content: center;
     gap: 1rem;
+  }
+`;
+
+const ImageContainer = styled.span`
+  @media (max-width: 550px) {
+    display: none;
   }
 `;
