@@ -73,9 +73,10 @@ export default function NewsLetter() {
 						>
 							<ModalContainer>
 								<h3
+									className="bold-fira"
 									style={{
-										fontWeight: "bold",
-										fontSize: "1.4rem",
+										fontWeight: "bolder",
+										fontSize: "1.7rem",
 										textAlign: "center",
 										marginBottom: "10px",
 									}}
