@@ -12,7 +12,6 @@ import {
 } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import Head from "next/head";
-import { db } from "../firebase";
 import Footer from "../components/footer";
 import { FadeInDown } from "../animations";
 
@@ -23,16 +22,8 @@ export default function NewsLetter() {
 	const [screenSize] = useMediaQuery("screen and (max-width: 1000px)");
 
 	const handleSubmit = async () => {
-		const email = (emailRef.current! as any).value;
-		const userName = (userNameRef.current! as any).value;
-		await db.collection("newsletter").add({
-			email,
-			userName,
-			createdAt: new Date(),
-		});
-		(emailRef.current! as any).value = "";
-		(userNameRef.current! as any).value = "";
-		setShown(true);
+		// handle submit
+		console.log("mail submitted")
 	};
 	return (
 		<>
