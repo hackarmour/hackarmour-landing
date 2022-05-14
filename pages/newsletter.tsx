@@ -104,7 +104,7 @@ export default function NewsLetter() {
                     marginBottom: "10px",
                   }}
                 >
-                  Get Updates About The CTF Awards
+                  Get Updates About The CTF
                 </h3>
                 <form
                   onSubmit={(e) => {
