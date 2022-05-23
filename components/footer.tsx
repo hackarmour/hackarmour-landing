@@ -18,9 +18,7 @@ const Footer = () => {
 				<a href="https://www.linkedin.com/company/hackarmour">
 					<IconButton aria-label="GitHub" icon={<FaLinkedin />} mr="10px" />
 				</a>
-				<a href="/newsletter">
-					<IconButton aria-label="Newsletter" icon={<FaNewspaper />} />
-				</a>
+				
 			</Flex>
 			<br />
 			<a className="bold-fira" href="mailto:staff@hackarmour.com">
