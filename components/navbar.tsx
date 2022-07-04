@@ -12,7 +12,6 @@ import { FadeInDown } from "../animations";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-
 const ROUTES = [
 	{
 		href: "https://github.com/hackarmour",
@@ -23,18 +22,18 @@ const ROUTES = [
 		href: "https://ctftime.org/event/1622",
 		title: "CTFs",
 		openInNewTab: true,
-		pathname: "/ctf"
+		pathname: "/ctf",
 	},
 	{
 		href: "/about",
 		title: "About",
-		openInNewTab: false
-	}
-]
+		openInNewTab: false,
+	},
+];
 
 const Navbar = () => {
 	const router = useRouter();
-	const route = router.pathname
+	const route = router.pathname;
 
 	return (
 		<Nav>
@@ -50,30 +49,40 @@ const Navbar = () => {
 					</Link>
 					<Links className="text-2">
 						<SimpleGrid columns={3} spacing={10}>
-							{
-								ROUTES.map(ROUTE => {
-									return ROUTE.openInNewTab ? (
-										<a target="_blank" rel="noreferred" href={ROUTE.href} key={ROUTE.href} style={{
-											textDecoration: route === (ROUTE.pathname || ROUTE.href) ? "underline" : "none"
-										}} >
-											{
-												ROUTE.title
-											}
+							{ROUTES.map((ROUTE) => {
+								return ROUTE.openInNewTab ? (
+									<a
+										target="_blank"
+										rel="noreferred"
+										href={ROUTE.href}
+										key={ROUTE.href}
+										style={{
+											textDecoration:
+												route ===
+												(ROUTE.pathname || ROUTE.href)
+													? "underline"
+													: "none",
+										}}
+									>
+										{ROUTE.title}
+									</a>
+								) : (
+									<Link href={ROUTE.href} key={ROUTE.href}>
+										<a
+											style={{
+												textDecoration:
+													route ===
+													(ROUTE.pathname ||
+														ROUTE.href)
+														? "underline"
+														: "none",
+											}}
+										>
+											{ROUTE.title}
 										</a>
-									) : (
-										<Link href={ROUTE.href} key={ROUTE.href} >
-											<a style={{
-												textDecoration: route === (ROUTE.pathname || ROUTE.href) ? "underline" : "none"
-											}} >
-												{
-													ROUTE.title
-												}
-											</a>
-										</Link>
-									)
-								}
-								)
-							}
+									</Link>
+								);
+							})}
 						</SimpleGrid>
 					</Links>
 					<Discord
@@ -104,21 +113,27 @@ const Navbar = () => {
 									target="_blank"
 									rel="noreferrer"
 								>
-									<MenuItem icon={<ExternalLinkIcon />}>CTF</MenuItem>
+									<MenuItem icon={<ExternalLinkIcon />}>
+										CTF
+									</MenuItem>
 								</a>
 								<a
 									target="_blank"
 									rel="noreferrer"
 									href="https://github.com/hackarmour"
 								>
-									<MenuItem icon={<ExternalLinkIcon />}>GitHub</MenuItem>
+									<MenuItem icon={<ExternalLinkIcon />}>
+										GitHub
+									</MenuItem>
 								</a>
 								<a
 									target="_blank"
 									rel="noreferrer"
 									href="https://discord.gg/mxHtj8q3c4"
 								>
-									<MenuItem icon={<ExternalLinkIcon />}>Discord</MenuItem>
+									<MenuItem icon={<ExternalLinkIcon />}>
+										Discord
+									</MenuItem>
 								</a>
 							</MenuList>
 						</Menu>
