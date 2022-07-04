@@ -15,10 +15,10 @@ import { useRouter } from "next/router";
 
 const Navbar = () => {
 	const router = useRouter();
-	const [path, changePath]: any = useState();
+	const [path, changePath] = useState<string>("");
 	useEffect(() => {
 		changePath(router.pathname);
-		const handleRouteChange = (url: any) => {
+		const handleRouteChange = (url: string) => {
 			changePath(url);
 		};
 		router.events.on("routeChangeStart", handleRouteChange);
