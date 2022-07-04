@@ -98,12 +98,10 @@ const About: NextPage = () => {
               in one place.{" "}
               <br />
               <br />
-              <p>
                 Our other goal is to make quality CTF challenges so our members
                 can have fun and learn with the community at the same time. We
                 are also aiming to make some teams where people can collaborate
                 on different projects and hone their teamwork skills. 
-              </p>
             </Content_Description>
           </Content>
 
@@ -209,6 +207,7 @@ const About: NextPage = () => {
                             fontFamily: "Fira Sans",
                             marginTop: "1rem",
                             fontWeight: "bold",
+                            textDecoration:"underline"
                           }}
                         >
                           {image.discordUsername}
