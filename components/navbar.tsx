@@ -29,6 +29,11 @@ const ROUTES = [
 		title: "About",
 		openInNewTab: false,
 	},
+	{
+		href: "/wiki",
+		title: "Wiki",
+		openInNewTab: false,
+	},
 ];
 
 const Navbar = () => {
@@ -48,7 +53,7 @@ const Navbar = () => {
 						</Logo>
 					</Link>
 					<Links className="text-2">
-						<SimpleGrid columns={3} spacing={10}>
+						<SimpleGrid columns={4} spacing={10}>
 							{ROUTES.map((ROUTE) => {
 								return ROUTE.openInNewTab ? (
 									<a
@@ -107,6 +112,9 @@ const Navbar = () => {
 								</Link>
 								<Link href="/about" passHref>
 									<MenuItem>About Us</MenuItem>
+								</Link>
+								<Link href="/wiki" passHref>
+									<MenuItem>Wiki</MenuItem>
 								</Link>
 								<a
 									href="https://ctftime.org/event/1622"
