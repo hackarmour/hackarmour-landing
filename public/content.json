@@ -1,0 +1,9 @@
+{
+	"routes": [
+		{
+			"name": "Contribution Guidelines",
+			"description": "To contribute code and ideas for hackarmour!",
+			"file": "/wiki/repo/contribution"
+		}
+	]
+}
