@@ -10,25 +10,35 @@ import { HamburgerIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import styled from "@emotion/styled";
 import { FadeInDown } from "../animations";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+
+const ROUTES = [
+	{
+		href: "https://github.com/hackarmour",
+		title: "Github",
+		openInNewTab: true,
+	},
+	{
+		href: "https://ctftime.org/event/1622",
+		title: "CTFs",
+		openInNewTab: true,
+		pathname: "/ctf",
+	},
+	{
+		href: "/about",
+		title: "About",
+		openInNewTab: false,
+	},
+	{
+		href: "/wiki",
+		title: "Wiki",
+		openInNewTab: false,
+	},
+];
 
 const Navbar = () => {
 	const router = useRouter();
-	const [path, changePath]: any = useState();
-	useEffect(() => {
-		changePath(router.pathname);
-		const handleRouteChange = (url: any) => {
-			changePath(url);
-		};
-		router.events.on("routeChangeStart", handleRouteChange);
-	}, [router.events, router.pathname]);
-
-	let about = false;
-	let ctf = false;
-
-	if (path == "/about") about = true;
-	else if (path == "/ctf") ctf = true;
+	const route = router.pathname;
 
 	return (
 		<Nav>
@@ -43,40 +53,41 @@ const Navbar = () => {
 						</Logo>
 					</Link>
 					<Links className="text-2">
-						<SimpleGrid columns={3} spacing={10}>
-							<a
-								href="https://github.com/hackarmour"
-								target="_blank"
-								rel="noreferrer"
-							>
-								GitHub
-							</a>
-							{ctf ? (
-								<u>
+						<SimpleGrid columns={4} spacing={10}>
+							{ROUTES.map((ROUTE) => {
+								return ROUTE.openInNewTab ? (
 									<a
-										href="https://ctftime.org/event/1622"
 										target="_blank"
-										rel="noreferrer"
+										rel="noreferred"
+										href={ROUTE.href}
+										key={ROUTE.href}
+										style={{
+											textDecoration:
+												route ===
+												(ROUTE.pathname || ROUTE.href)
+													? "underline"
+													: "none",
+										}}
 									>
-										CTFs
+										{ROUTE.title}
 									</a>
-								</u>
-							) : (
-								<a
-									href="https://ctftime.org/event/1622"
-									target="_blank"
-									rel="noreferrer"
-								>
-									CTFs
-								</a>
-							)}
-							{about ? (
-								<u>
-									<Link href="/about">About</Link>
-								</u>
-							) : (
-								<Link href="/about">About</Link>
-							)}
+								) : (
+									<Link href={ROUTE.href} key={ROUTE.href}>
+										<a
+											style={{
+												textDecoration:
+													route ===
+													(ROUTE.pathname ||
+														ROUTE.href)
+														? "underline"
+														: "none",
+											}}
+										>
+											{ROUTE.title}
+										</a>
+									</Link>
+								);
+							})}
 						</SimpleGrid>
 					</Links>
 					<Discord
@@ -102,26 +113,35 @@ const Navbar = () => {
 								<Link href="/about" passHref>
 									<MenuItem>About Us</MenuItem>
 								</Link>
+								<Link href="/wiki" passHref>
+									<MenuItem>Wiki</MenuItem>
+								</Link>
 								<a
 									href="https://ctftime.org/event/1622"
 									target="_blank"
 									rel="noreferrer"
 								>
-									<MenuItem icon={<ExternalLinkIcon />}>CTF</MenuItem>
+									<MenuItem icon={<ExternalLinkIcon />}>
+										CTF
+									</MenuItem>
 								</a>
 								<a
 									target="_blank"
 									rel="noreferrer"
 									href="https://github.com/hackarmour"
 								>
-									<MenuItem icon={<ExternalLinkIcon />}>GitHub</MenuItem>
+									<MenuItem icon={<ExternalLinkIcon />}>
+										GitHub
+									</MenuItem>
 								</a>
 								<a
 									target="_blank"
 									rel="noreferrer"
 									href="https://discord.gg/mxHtj8q3c4"
 								>
-									<MenuItem icon={<ExternalLinkIcon />}>Discord</MenuItem>
+									<MenuItem icon={<ExternalLinkIcon />}>
+										Discord
+									</MenuItem>
 								</a>
 							</MenuList>
 						</Menu>
