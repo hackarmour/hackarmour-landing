@@ -58,7 +58,7 @@ const Navbar = () => {
 								return ROUTE.openInNewTab ? (
 									<a
 										target="_blank"
-										rel="noreferred"
+										rel="noreferrer"
 										href={ROUTE.href}
 										key={ROUTE.href}
 										style={{
