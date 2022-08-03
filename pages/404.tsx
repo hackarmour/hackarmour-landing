@@ -1,12 +1,13 @@
 import styled from "@emotion/styled";
-import { Heading } from "../styles/pageStyles";
-import Link from "next/link";
+import { Heading } from "@chakra-ui/react";
 
 const Four0Four = () => {
 	return (
 		<Centered>
-			<Heading>404</Heading>
-			<p>Looks like there is nothing here</p>
+			<Heading fontFamily="bungee" fontSize="5rem">
+				404
+			</Heading>
+			<p>There is nothing here</p>
 		</Centered>
 	);
 };
