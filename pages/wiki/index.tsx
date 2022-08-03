@@ -1,60 +1,59 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
 import { FadeInDown } from "../../animations";
 import { Container } from "../../styles/pageStyles";
 import { Spinner, Container as ChakraContainer } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-import axios from "axios";
 import Link from "next/link";
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 
 type Routes = {
-    name: string;
-    description: string;
-    file: string;
+	name: string;
+	description: string;
+	file: string;
 };
 
-const WikiIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ routes }) => {
+const WikiIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+	routes,
+}) => {
+	return (
+		<>
+			<Head>
+				<title>Wiki</title>
+			</Head>
 
-    return (
-        <>
-            <Head>
-                <title>Wiki</title>
-            </Head>
-
-            <FadeInDown>
-                <Container>
-                    {routes.length === 0 && (
-                        <CenteredContainer>
-                            <Spinner size="xl" />
-                        </CenteredContainer>
-                    )}
-                </Container>
-                <ChakraContainer>
-                    {routes &&
-                        routes.map((route) => {
-                            return (
-                                <Link
-                                    href={route.file}
-                                    key={route.name}
-                                    passHref
-                                    target={"_blank"}
-                                >
-                                    <Holder>
-                                        <Title>{route.name}</Title>
-                                        <Description>
-                                            {route.description}
-                                        </Description>
-                                    </Holder>
-                                </Link>
-                            );
-                        })}
-                </ChakraContainer>
-            </FadeInDown>
-        </>
-    );
-}
-export default WikiIndex
+			<FadeInDown>
+				<Container>
+					{routes.length === 0 && (
+						<CenteredContainer>
+							<Spinner size="xl" />
+						</CenteredContainer>
+					)}
+				</Container>
+				<ChakraContainer>
+					{routes &&
+						routes.map((route) => {
+							return (
+								<Link
+									href={route.file}
+									key={route.name}
+									passHref
+									target={"_blank"}
+								>
+									<Holder>
+										<Title>{route.name}</Title>
+										<Description>
+											{route.description}
+										</Description>
+									</Holder>
+								</Link>
+							);
+						})}
+				</ChakraContainer>
+			</FadeInDown>
+		</>
+	);
+};
+export default WikiIndex;
 const CenteredContainer = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -89,9 +88,11 @@ const Description = styled.p`
 	margin-top: 1.25rem;
 `;
 
-export const getStaticProps: GetStaticProps<{ routes: Routes[] }> = async (context) => {
-    const routes = await (await import("../../public/content.json")).routes
-    return {
-        props: { routes: (routes as Routes[]) }
-    }
-}
+export const getStaticProps: GetStaticProps<{ routes: Routes[] }> = async (
+	context
+) => {
+	const routes = await (await import("../../public/content.json")).routes;
+	return {
+		props: { routes: routes as Routes[] },
+	};
+};
