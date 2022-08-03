@@ -4,7 +4,7 @@ import { Heading } from "@chakra-ui/react";
 const Four0Four = () => {
 	return (
 		<Centered>
-			<Heading fontFamily="bungee" fontSize="5rem">
+			<Heading fontFamily="bungee" fontSize="6em">
 				404
 			</Heading>
 			<p>There is nothing here</p>
