@@ -46,7 +46,7 @@ const Navbar = () => {
 				<SimpleGrid columns={{ base: 2, md: 2, lg: 3 }}>
 					<Link href="/" passHref>
 						<Logo>
-							<img src="./logo.svg" alt="logo" />
+							<img src="/logo.svg" alt="logo" />
 							<strong>
 								<code>HackArmour</code>
 							</strong>
