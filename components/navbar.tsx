@@ -42,7 +42,6 @@ const ROUTES = [
 const Navbar = () => {
 	const router = useRouter();
 	const route = router.pathname;
-	const [isSmallScreen] = useMediaQuery("(max-width: 1120px)");
 
 	return (
 		<Nav>
@@ -56,12 +55,7 @@ const Navbar = () => {
 							</strong>
 						</Logo>
 					</Link>
-					<Box
-						display={isSmallScreen ? "none" : "inline"}
-						textAlign="center"
-						fontWeight="bold"
-						margin="auto"
-					>
+					<Links>
 						<SimpleGrid columns={4} spacing={10}>
 							{ROUTES.map((ROUTE) => {
 								return ROUTE.openInNewTab ? (
@@ -98,7 +92,7 @@ const Navbar = () => {
 								);
 							})}
 						</SimpleGrid>
-					</Box>
+					</Links>
 					<Discord
 						href="https://discord.gg/mxHtj8q3c4"
 						target="_blank"
@@ -181,6 +175,14 @@ const MenuContainer = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: right;
+	}
+`;
+const Links = styled.div`
+	text-align: center;
+	font-weight: bold;
+	margin: auto;
+	@media screen and (max-width: 1120px) {
+		display: none;
 	}
 `;
 
