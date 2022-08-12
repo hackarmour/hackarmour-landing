@@ -102,7 +102,6 @@ const DynamicRepoPage: NextPage = () => {
 	const [content, setContent] = useState<string>();
 	const [error, setError] = useState("");
 	useEffect(() => {
-		console.log(query.repo);
 		if (!query.repo) return;
 		async function fetchRepoContent() {
 			if (query.repo === ".github") {

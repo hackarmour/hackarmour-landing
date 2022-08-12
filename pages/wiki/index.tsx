@@ -60,7 +60,7 @@ const WikiIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 										>
 											{route.name}
 										</Text>
-										<Text>{route.description}</Text>
+										<Text style={{ fontFamily: 'Whyte' }}>{route.description}</Text>
 									</Box>
 								</Link>
 							);

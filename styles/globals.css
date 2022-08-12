@@ -59,6 +59,10 @@ li {
 	margin-left: 2rem;
 }
 
+.anchorer {
+	font-family: "Whyte", sans-serif;
+}
+
 .anchorer a {
 	color: #4299e1;
 }
