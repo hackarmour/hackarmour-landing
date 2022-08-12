@@ -5,6 +5,9 @@ import {
 	MenuList,
 	MenuItem,
 	IconButton,
+	Box,
+	useMediaQuery,
+	Flex,
 } from "@chakra-ui/react";
 import { HamburgerIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import styled from "@emotion/styled";
@@ -39,11 +42,12 @@ const ROUTES = [
 const Navbar = () => {
 	const router = useRouter();
 	const route = router.pathname;
+	const [isSmallScreen] = useMediaQuery("(max-width: 1120px)");
 
 	return (
 		<Nav>
 			<FadeInDown>
-				<SimpleGrid columns={{ base: 2, md: 2, lg: 3 }}>
+				<SimpleGrid columns={isSmallScreen ? 2 : 3}>
 					<Link href="/" passHref>
 						<Logo>
 							<img src="/logo.svg" alt="logo" />
@@ -52,7 +56,12 @@ const Navbar = () => {
 							</strong>
 						</Logo>
 					</Link>
-					<Links className="text-2">
+					<Box
+						display={isSmallScreen ? "none" : "inline"}
+						textAlign="center"
+						fontWeight="bold"
+						margin="auto"
+					>
 						<SimpleGrid columns={4} spacing={10}>
 							{ROUTES.map((ROUTE) => {
 								return ROUTE.openInNewTab ? (
@@ -89,21 +98,29 @@ const Navbar = () => {
 								);
 							})}
 						</SimpleGrid>
-					</Links>
-					<Discord
+					</Box>
+					<Box
+						textAlign="right"
+						margin="auto"
+						display={isSmallScreen ? "none" : "inline"}
 						href="https://discord.gg/mxHtj8q3c4"
 						target="_blank"
 						rel="noreferrer"
 						className="text-2"
 					>
 						Discord
-					</Discord>
-					<MenuC>
+					</Box>
+					<Flex
+						alignItems="center"
+						justifyContent="right"
+						display={isSmallScreen ? "flex" : "none"}
+					>
 						<Menu>
 							<MenuButton
 								as={IconButton}
 								aria-label="Options"
 								icon={<HamburgerIcon w={6} h={6} />}
+								marginRight="3rem"
 							/>
 
 							<MenuList className="text-2">
@@ -145,7 +162,7 @@ const Navbar = () => {
 								</a>
 							</MenuList>
 						</Menu>
-					</MenuC>
+					</Flex>
 				</SimpleGrid>
 			</FadeInDown>
 		</Nav>
@@ -157,41 +174,12 @@ const Nav = styled.nav`
 	font-size: 1.12rem;
 `;
 
-const Links = styled.div`
-	text-align: center;
-	font-weight: bold;
-	margin: auto;
-	@media all and (max-width: 62rem) {
-		display: none !important;
-	}
-`;
-
-const Discord = styled.a`
-	text-align: right;
-	margin: auto;
-	@media all and (max-width: 62rem) {
-		display: none !important;
-	}
-`;
-
 const Logo = styled.div`
 	font-size: 1.4rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-`;
-
-const MenuC = styled.div`
-	display: flex;
-	justify-content: right;
-	margin-top: auto;
-	align-items: center;
-	height: 100%;
-	width: 100%;
-	@media all and (min-width: 62rem) {
-		display: none !important;
-	}
 `;
 
 export default Navbar;
