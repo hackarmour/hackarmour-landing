@@ -103,12 +103,15 @@ const Navbar = () => {
 						textAlign="right"
 						margin="auto"
 						display={isSmallScreen ? "none" : "inline"}
-						href="https://discord.gg/mxHtj8q3c4"
-						target="_blank"
-						rel="noreferrer"
-						className="text-2"
 					>
-						Discord
+						<a 
+							href="https://discord.gg/mxHtj8q3c4"
+							target="_blank"
+							rel="noreferrer"
+							className="text-2"
+						>
+							Discord
+						</a>
 					</Box>
 					<Flex
 						alignItems="center"
