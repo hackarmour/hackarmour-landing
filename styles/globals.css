@@ -47,7 +47,20 @@ a {
 
 .bold-fira {
 	font-family: "Fira Sans";
-	font-weight: bold;
+	font-weight: 80vw;
+}
+code {
+	overflow-y: scroll;
+	display: inline-flex;
+	max-width: 80vw;
+}
+
+li {
+	margin-left: 2rem;
+}
+
+.anchorer a {
+	color: #4299e1;
 }
 
 @media all and (max-width: 62rem) {
