@@ -162,7 +162,7 @@ const DynamicRepoPage: NextPage = () => {
 };
 
 const RepoContainer = styled.div`
-	width: 80%;
+	width: 65%;
 	margin: auto;
 	padding-top: 5vh;
 	@media all and (max-width: 62rem) {
