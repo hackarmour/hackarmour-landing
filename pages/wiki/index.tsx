@@ -35,7 +35,7 @@ const WikiIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 					alignItems="center"
 					justifyContent="center"
 					direction="column"
-					gap="5rem"
+					gap="1rem"
 					height="57vh"
 				>
 					{routes &&

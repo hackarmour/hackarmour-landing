@@ -62,6 +62,18 @@ li {
 .anchorer a {
 	color: #4299e1;
 }
+.anchorer img {
+	margin-block: 15px;
+}
+.anchorer p {
+	padding-block: 5px;
+}
+.anchorer code {
+	background-color: #171923;
+	padding-inline: 5px;
+	padding-block: 1px;
+	border-radius: 5px;
+}
 
 @media all and (max-width: 62rem) {
 	.bold {
