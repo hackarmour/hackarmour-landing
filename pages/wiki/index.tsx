@@ -1,10 +1,11 @@
 import Head from "next/head";
 import { FadeInDown } from "../../animations";
 import { Container } from "../../styles/pageStyles";
-import { Spinner, Container as ChakraContainer } from "@chakra-ui/react";
+import { Spinner, Box, Text, Flex, useMediaQuery } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import Link from "next/link";
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
+import Footer from "../../components/footer";
 
 type Routes = {
 	name: string;
@@ -15,6 +16,7 @@ type Routes = {
 const WikiIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 	routes,
 }) => {
+	const [isSmallScreen] = useMediaQuery("(max-width: 650px)");
 	return (
 		<>
 			<Head>
@@ -29,7 +31,13 @@ const WikiIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 						</CenteredContainer>
 					)}
 				</Container>
-				<ChakraContainer>
+				<Flex
+					alignItems="center"
+					justifyContent="center"
+					direction="column"
+					gap="1rem"
+					height="57vh"
+				>
 					{routes &&
 						routes.map((route) => {
 							return (
@@ -39,16 +47,26 @@ const WikiIndex: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 									passHref
 									target={"_blank"}
 								>
-									<Holder>
-										<Title>{route.name}</Title>
-										<Description>
-											{route.description}
-										</Description>
-									</Holder>
+									<Box
+										cursor="pointer"
+										width={isSmallScreen ? "75vw" : "40vw"}
+										backgroundColor="gray.700"
+										padding="15px"
+										borderRadius="5px"
+									>
+										<Text
+											fontSize="1.5rem"
+											fontWeight="extrabold"
+										>
+											{route.name}
+										</Text>
+										<Text>{route.description}</Text>
+									</Box>
 								</Link>
 							);
 						})}
-				</ChakraContainer>
+				</Flex>
+				<Footer />
 			</FadeInDown>
 		</>
 	);
@@ -60,32 +78,6 @@ const CenteredContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	margin-top: 3rem;
-`;
-
-const Title = styled.h1`
-	font-size: 1.1rem;
-	text-align: center;
-`;
-
-const Holder = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	border-radius: 25px;
-	border: 0.01px solid #232b3b;
-	padding: 1rem;
-	margin-bottom: 1rem;
-	box-shadow: 1px 2px 10px 1px #232b3b;
-	cursor: pointer;
-	transition: 200ms ease linear;
-	&:hover {
-		scale: 105%;
-	}
-`;
-const Description = styled.p`
-	font-size: 0.85rem;
-	margin-top: 1.25rem;
 `;
 
 export const getStaticProps: GetStaticProps<{ routes: Routes[] }> = async (

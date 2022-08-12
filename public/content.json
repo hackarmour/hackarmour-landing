@@ -4,6 +4,11 @@
 			"name": "Contribution Guidelines",
 			"description": "To contribute code and ideas for hackarmour!",
 			"file": "/wiki/repo/contribution"
+		},
+		{
+			"name": "Programming Resources",
+			"description": "List of resources for aspiring contributors related to technologies we use here at hackarmour",
+			"file": "/wiki/repo/programming-resources"
 		}
 	]
 }

@@ -2,11 +2,13 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { DetailedHTMLProps, HTMLAttributes, useEffect, useState } from "react";
 import { FadeInDown } from "../../../animations";
-import { Container } from "../../../styles/pageStyles";
+import styled from "@emotion/styled";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import axios from "axios";
 import Head from "next/head";
+import { Flex, Text } from "@chakra-ui/react";
+import Footer from "../../../components/footer";
 
 const components = {
 	h1: (
@@ -120,7 +122,7 @@ const DynamicRepoPage: NextPage = () => {
 						`https://raw.githubusercontent.com/hackarmour/${query.repo}/main/README.md`
 					)
 					.catch(() => {
-						setError("An Error Occured.");
+						setError("Repo Not Found");
 					});
 				if (!content) return;
 				setContent((await serialize(content.data)).compiledSource);
@@ -134,18 +136,40 @@ const DynamicRepoPage: NextPage = () => {
 				<title>{query.repo || "Hackarmour"} - Wiki</title>
 			</Head>
 			<FadeInDown>
-				<Container>
+				<RepoContainer>
 					{error ? (
-						<h1>{error}</h1>
+						<Flex
+							alignItems="center"
+							justifyContent="center"
+							height="80vh"
+						>
+							<Text fontFamily="quicksand" fontSize="2rem">
+								{error}
+							</Text>
+						</Flex>
 					) : content ? (
-						<MDXRemote
-							{...{ components, compiledSource: content }}
-						/>
+						<div className="anchorer">
+							<MDXRemote
+								{...{ components, compiledSource: content }}
+							/>
+						</div>
 					) : null}
 					<h1></h1>
-				</Container>
+				</RepoContainer>
 			</FadeInDown>
+			<Footer />
 		</>
 	);
 };
+
+const RepoContainer = styled.div`
+	width: 80%;
+	margin: auto;
+	padding-top: 5vh;
+	@media all and (max-width: 62rem) {
+		width: 100%;
+		padding-inline: 20px;
+	}
+`;
+
 export default DynamicRepoPage;

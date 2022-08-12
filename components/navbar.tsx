@@ -5,6 +5,9 @@ import {
 	MenuList,
 	MenuItem,
 	IconButton,
+	Box,
+	useMediaQuery,
+	Flex,
 } from "@chakra-ui/react";
 import { HamburgerIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import styled from "@emotion/styled";
@@ -43,7 +46,7 @@ const Navbar = () => {
 	return (
 		<Nav>
 			<FadeInDown>
-				<SimpleGrid columns={{ base: 2, md: 2, lg: 3 }}>
+				<Grid>
 					<Link href="/" passHref>
 						<Logo>
 							<img src="/logo.svg" alt="logo" />
@@ -52,7 +55,7 @@ const Navbar = () => {
 							</strong>
 						</Logo>
 					</Link>
-					<Links className="text-2">
+					<Links>
 						<SimpleGrid columns={4} spacing={10}>
 							{ROUTES.map((ROUTE) => {
 								return ROUTE.openInNewTab ? (
@@ -98,12 +101,13 @@ const Navbar = () => {
 					>
 						Discord
 					</Discord>
-					<MenuC>
+					<MenuContainer>
 						<Menu>
 							<MenuButton
 								as={IconButton}
 								aria-label="Options"
 								icon={<HamburgerIcon w={6} h={6} />}
+								marginRight="3rem"
 							/>
 
 							<MenuList className="text-2">
@@ -145,8 +149,8 @@ const Navbar = () => {
 								</a>
 							</MenuList>
 						</Menu>
-					</MenuC>
-				</SimpleGrid>
+					</MenuContainer>
+				</Grid>
 			</FadeInDown>
 		</Nav>
 	);
@@ -157,23 +161,6 @@ const Nav = styled.nav`
 	font-size: 1.12rem;
 `;
 
-const Links = styled.div`
-	text-align: center;
-	font-weight: bold;
-	margin: auto;
-	@media all and (max-width: 62rem) {
-		display: none !important;
-	}
-`;
-
-const Discord = styled.a`
-	text-align: right;
-	margin: auto;
-	@media all and (max-width: 62rem) {
-		display: none !important;
-	}
-`;
-
 const Logo = styled.div`
 	font-size: 1.4rem;
 	display: flex;
@@ -182,16 +169,35 @@ const Logo = styled.div`
 	cursor: pointer;
 `;
 
-const MenuC = styled.div`
-	display: flex;
-	justify-content: right;
-	margin-top: auto;
-	align-items: center;
-	height: 100%;
-	width: 100%;
-	@media all and (min-width: 62rem) {
-		display: none !important;
+const MenuContainer = styled.div`
+	display: none;
+	@media screen and (max-width: 1120px) {
+		display: flex;
+		align-items: center;
+		justify-content: right;
+	}
+`;
+const Links = styled.div`
+	text-align: center;
+	font-weight: bold;
+	margin: auto;
+	@media screen and (max-width: 1120px) {
+		display: none;
 	}
 `;
 
+const Discord = styled.a`
+	text-align: right;
+	margin: auto;
+	@media all and (max-width: 1120px) {
+		display: none;
+	}
+`;
+const Grid = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	@media all and (max-width: 1120px) {
+		grid-template-columns: 1fr 1fr;
+	}
+`;
 export default Navbar;
