@@ -47,7 +47,7 @@ const Navbar = () => {
 	return (
 		<Nav>
 			<FadeInDown>
-				<SimpleGrid columns={isSmallScreen ? 2 : 3}>
+				<Grid>
 					<Link href="/" passHref>
 						<Logo>
 							<img src="/logo.svg" alt="logo" />
@@ -99,25 +99,15 @@ const Navbar = () => {
 							})}
 						</SimpleGrid>
 					</Box>
-					<Box
-						textAlign="right"
-						margin="auto"
-						display={isSmallScreen ? "none" : "inline"}
+					<Discord
+						href="https://discord.gg/mxHtj8q3c4"
+						target="_blank"
+						rel="noreferrer"
+						className="text-2"
 					>
-						<a 
-							href="https://discord.gg/mxHtj8q3c4"
-							target="_blank"
-							rel="noreferrer"
-							className="text-2"
-						>
-							Discord
-						</a>
-					</Box>
-					<Flex
-						alignItems="center"
-						justifyContent="right"
-						display={isSmallScreen ? "flex" : "none"}
-					>
+						Discord
+					</Discord>
+					<MenuContainer>
 						<Menu>
 							<MenuButton
 								as={IconButton}
@@ -165,8 +155,8 @@ const Navbar = () => {
 								</a>
 							</MenuList>
 						</Menu>
-					</Flex>
-				</SimpleGrid>
+					</MenuContainer>
+				</Grid>
 			</FadeInDown>
 		</Nav>
 	);
@@ -185,4 +175,27 @@ const Logo = styled.div`
 	cursor: pointer;
 `;
 
+const MenuContainer = styled.div`
+	display: none;
+	@media screen and (max-width: 1120px) {
+		display: flex;
+		align-items: center;
+		justify-content: right;
+	}
+`;
+
+const Discord = styled.a`
+	text-align: right;
+	margin: auto;
+	@media all and (max-width: 1120px) {
+		display: none;
+	}
+`;
+const Grid = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	@media all and (max-width: 1120px) {
+		grid-template-columns: 1fr 1fr;
+	}
+`;
 export default Navbar;
