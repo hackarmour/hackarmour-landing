@@ -9,7 +9,7 @@ const Footer = () => {
 		>
 			<Flex alignItems="center" justifyContent="center" fontSize="1.2rem">
 				<br />
-				<a href="https://twitter.com/thehackarmour">
+				<a href="https://twitter.com/hackarmour">
 					<IconButton aria-label="Twitter" icon={<FaTwitter />} mr="10px" />
 				</a>
 				<a href="https://github.com/hackarmour">
