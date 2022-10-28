@@ -148,7 +148,7 @@ const About: NextPage = () => {
                     </a>
                   </MainStaffHeading>
                   <Content_Description className="text-2">
-                    CEO, Operations and Community Manager. Lead of Frontend development and Creator of some infosec tools released,
+                    Co-Founder, Operations and Community Manager. Lead of Frontend development and Creator of some infosec tools released,
                     enjoys pentesting and web dev.
                   </Content_Description>
                 </MainContentGrid>
