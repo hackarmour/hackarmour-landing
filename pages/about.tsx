@@ -144,12 +144,11 @@ const About: NextPage = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      @0xGamer - CEO
+                      Rishiraj - CEO
                     </a>
                   </MainStaffHeading>
                   <Content_Description className="text-2">
-                    CEO, Operations and Community Manager. Organizer and
-                    Challenge creator of CTFs and some infosec tools released,
+                    CEO, Operations and Community Manager. Lead of Frontend development and Creator of some infosec tools released,
                     enjoys pentesting and web dev.
                   </Content_Description>
                 </MainContentGrid>
