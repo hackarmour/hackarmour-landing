@@ -165,12 +165,11 @@ const About: NextPage = () => {
                 </MainImageGrid>
                 <MainContentGrid>
                   <MainStaffHeading className="text-2">
-                    @0xGamer - CEO
+                    Rishiraj - CEO
                   </MainStaffHeading>
                   <Content_Description className="text-2">
-                    CEO, operations manager and Discord Admin. Organizer and
-                    challenge creator of CTFs and some infosec tools released,
-                    enjoys pentesting and pwning boxes.
+                    Co-Founder, Operations and Community Manager. Lead of Frontend development and Creator of some infosec tools released,
+                    enjoys pentesting and web dev.
                   </Content_Description>
                 </MainContentGrid>
               </MainStaff>
