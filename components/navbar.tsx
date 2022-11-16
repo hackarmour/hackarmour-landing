@@ -144,7 +144,7 @@ const Navbar = () => {
 };
 
 const Nav = styled.nav`
-	/* padding: 0.5rem; */
+	z-index: 1;
 	font-size: 1.12rem;
 	position: fixed;
 	width: 100%;
