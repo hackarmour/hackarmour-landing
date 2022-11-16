@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -21,7 +21,7 @@ import {
 
 const Policy: NextPage = () => {
   return (
-    <div>
+    <Box bg="mocha.700" color="mocha.100" paddingTop="3rem">
       <Head>
         <title>Policy</title>
         <meta name="description" content="Privacy policy for HackArmour" />
@@ -299,7 +299,7 @@ const Policy: NextPage = () => {
         </Contents>
       </FadeInDown>
       <Footer />
-    </div>
+    </Box>
   );
 };
 

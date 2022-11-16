@@ -24,16 +24,26 @@ const Navbar = () => {
 		router.events.on("routeChangeStart", handleRouteChange);
 	}, [router.events, router.pathname]);
 
-	let about = false;
-	let ctf = false;
+  var about = false;
+	var ctf = false;
+	var transparency = 1;
 
-	if (path == "/about") about = true;
-	else if (path == "/ctf") ctf = true;
+	switch (path) {
+		case "/":
+			var transparency = 0
+			break;
+		case "/about":
+			var about = true;
+			break;
+		case "/ctf":
+			var ctf = true;
+			break;
+	}
 
 	return (
 		<Nav>
 			<FadeInDown>
-				<SimpleGrid columns={{ base: 2, md: 2, lg: 3 }}>
+				<SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} color="mocha.100" bg={`rgba(24, 24, 37, ${transparency})`}>
 					<Link href="/" passHref>
 						<Logo>
 							<img src="./logo.svg" alt="logo" />
@@ -92,36 +102,37 @@ const Navbar = () => {
 							<MenuButton
 								as={IconButton}
 								aria-label="Options"
+								colorScheme="Black"
 								icon={<HamburgerIcon w={6} h={6} />}
 							/>
 
-							<MenuList className="text-2">
+							<MenuList className="text-2" bg="mocha.800" color="mocha.100">
 								<Link href="/" passHref>
-									<MenuItem>Home</MenuItem>
+									<MenuItem _focus={{"bg": "mocha.700"}}>Home</MenuItem>
 								</Link>
 								<Link href="/about" passHref>
-									<MenuItem>About Us</MenuItem>
+									<MenuItem _hover={{"bg": "mocha.900"}} _focus={{"bg": "mocha.700"}}>About Us</MenuItem>
 								</Link>
 								<a
 									href="https://ctftime.org/event/1622"
 									target="_blank"
 									rel="noreferrer"
 								>
-									<MenuItem icon={<ExternalLinkIcon />}>CTF</MenuItem>
+									<MenuItem _hover={{"bg": "mocha.900"}} _focus={{"bg": "mocha.700"}} icon={<ExternalLinkIcon />} >CTF</MenuItem>
 								</a>
 								<a
 									target="_blank"
 									rel="noreferrer"
 									href="https://github.com/hackarmour"
 								>
-									<MenuItem icon={<ExternalLinkIcon />}>GitHub</MenuItem>
+									<MenuItem _hover={{"bg": "mocha.900"}} _focus={{"bg": "mocha.700"}} icon={<ExternalLinkIcon />} >GitHub</MenuItem>
 								</a>
 								<a
 									target="_blank"
 									rel="noreferrer"
 									href="https://discord.gg/mxHtj8q3c4"
 								>
-									<MenuItem icon={<ExternalLinkIcon />}>Discord</MenuItem>
+									<MenuItem _hover={{"bg": "mocha.900"}} _focus={{"bg": "mocha.700"}} icon={<ExternalLinkIcon />} >Discord</MenuItem>
 								</a>
 							</MenuList>
 						</Menu>
@@ -133,13 +144,15 @@ const Navbar = () => {
 };
 
 const Nav = styled.nav`
-	padding: 0.5rem;
+	/* padding: 0.5rem; */
 	font-size: 1.12rem;
+	position: fixed;
+	width: 100%;
+	top: 0%;
 `;
 
 const Links = styled.div`
 	text-align: center;
-	font-weight: bold;
 	margin: auto;
 	@media all and (max-width: 62rem) {
 		display: none !important;

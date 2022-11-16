@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react"
+import { Box, Button } from "@chakra-ui/react"
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { FadeInDown } from '../animations'
@@ -17,7 +17,7 @@ import {
 
 const Community: NextPage = () => {
     return (
-        <div>
+        <Box bg="mocha.700" color="mocha.100" paddingTop="3rem">
             <Head>
                 <title>Hackarmour CTF</title>
                 <meta name="description"
@@ -37,11 +37,13 @@ const Community: NextPage = () => {
                         </Description>
                         <br />
                         <a href="https://discord.gg/xBq4QSmjMp">
-                            <Button
-                                className="text-med"
-                                backgroundColor="#2D5BFF"
-                                fontSize={{ lg: "1.3rem", md: "1rem" }}
-                            > Join Discord</Button>
+                        <Button
+                            className="text-med"
+                            bg="blue.300"
+                            _hover={{"bg": "blue.400"}}
+                            color="mocha.900"
+                            fontSize={{ lg: "1.3rem", md: "1rem" }}
+                        > Join Discord</Button>
                         </a>
                     </Container>
                 </FadeInDown>
@@ -73,7 +75,7 @@ const Community: NextPage = () => {
             </FadeInDown>
 
             <Footer />
-        </div>
+        </Box>
     )
 }
 

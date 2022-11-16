@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react"
+import { Button, Box, Flex } from "@chakra-ui/react"
 import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import Head from 'next/head'
@@ -7,16 +7,21 @@ import { FadeInDown } from '../animations'
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <Box bg="mocha.700" color="mocha.100">
       <Head>
         <title>HackArmour</title>
         {/* TODO: Meta Tags */}
       </Head>
       <Hero>
         <FadeInDown>
-          <Container>
+          <Flex
+            direction="column"
+            alignItems="center"
+            justifyContent="center"
+            height="100vh" 
+          >
             <Heading className="bold">
-              Welcome To <Break /> Hackarmour
+              Welcome To<Break/> Hackarmour
             </Heading>
             <br />
             <Description className="text">
@@ -26,46 +31,42 @@ const Home: NextPage = () => {
             <Link passHref href="/about">
               <Button
                 className="text-med"
-                backgroundColor="#2D5BFF"
+                bg="blue.300"
+                color="mocha.900"
+                _hover={{ bg: 'blue.400' }}
                 fontSize={{ lg: "1.3rem", md: "1rem" }}
+                marginTop="1rem"
               >Learn More</Button>
             </Link>
-          </Container>
+          </Flex>
         </FadeInDown>
       </Hero>
-    </div>
+    </Box>
   )
 }
 
 const Hero = styled.main`
   width: 100%;
   text-align: center;
-  height: 90vh;
+  height: 100vh;
   padding: 2.5%;
+  overflow: hidden;
+  background: radial-gradient(circle at center,#1e1e2e  0%, #11111b 100%);
 `
-
+  
 const Break = styled.br`
-  @media all and (max-width: 62rem) {
-    display: none;
-  }
-`
-
-const Container = styled.div`
-  padding-top: 17vh;
-  @media all and (max-width: 62rem) {
-    paddding-top: 0.5vh;
-  }
+@media all and (max-width: 62rem) {
+  display: none;
+}
 `
 
 const Heading = styled.h1`
   font-size: 5rem;
-  white-space: pre-wrap !important;
+  background: linear-gradient(#fff, #96b4ec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   @media all and (max-width: 62rem) {
-    font-size: 3rem;
-  }
-
-  @media all and (max-width: 23.5rem) {
-    font-size: 2.55rem;
+    font-size: 2rem;
   }
 `
 
