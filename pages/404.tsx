@@ -1,20 +1,19 @@
-import styled from "@emotion/styled";
 import { Heading } from "../styles/pageStyles";
-import Link from "next/link";
+import { Flex } from "@chakra-ui/react";
 
 const Four0Four = () => {
 	return (
-		<Centered>
+		<Flex
+			flexDirection="column"
+			alignItems="center"
+			justifyContent="center"
+			height="100vh"
+			bg="mocha.700"
+			color="mocha.100"
+		>
 			<Heading>404</Heading>
 			<p>Looks like there is nothing here</p>
-		</Centered>
+		</Flex>
 	);
 }
-const Centered = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 80vh;
-`
 export default Four0Four;

@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -48,7 +48,7 @@ const StaffImages = [
 
 const About: NextPage = () => {
   return (
-    <div>
+    <Box bg="mocha.700" color="mocha.100" paddingTop="3rem">
       <Head>
         <title>About Us</title>
         <meta
@@ -72,7 +72,9 @@ const About: NextPage = () => {
             <a href="about#contact">
               <Button
                 className="text-med"
-                backgroundColor="#2D5BFF"
+                bg="blue.300"
+                _hover={{"bg": "blue.400"}}
+                color="mocha.900"
                 fontSize={{ lg: "1.3rem", md: "1rem" }}
               >
                 Contact Us
@@ -220,7 +222,7 @@ const About: NextPage = () => {
         </Contents>
       </FadeInDown>
       <Footer />
-    </div>
+    </Box>
   );
 };
 

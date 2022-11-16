@@ -16,6 +16,7 @@ body {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  background: #1e1e2e;
 }
 
 a {
