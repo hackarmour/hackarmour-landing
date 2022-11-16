@@ -153,7 +153,6 @@ const Nav = styled.nav`
 
 const Links = styled.div`
 	text-align: center;
-	font-weight: bold;
 	margin: auto;
 	@media all and (max-width: 62rem) {
 		display: none !important;
