@@ -24,16 +24,26 @@ const Navbar = () => {
 		router.events.on("routeChangeStart", handleRouteChange);
 	}, [router.events, router.pathname]);
 
-	let about = false;
-	let ctf = false;
+  var about = false;
+	var ctf = false;
+	var transparency = 1;
 
-	if (path == "/about") about = true;
-	else if (path == "/ctf") ctf = true;
+	switch (path) {
+		case "/":
+			var transparency = 0
+			break;
+		case "/about":
+			var about = true;
+			break;
+		case "/ctf":
+			var ctf = true;
+			break;
+	}
 
 	return (
 		<Nav>
 			<FadeInDown>
-				<SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} color="mocha.100" bg="mocha.800">
+				<SimpleGrid columns={{ base: 2, md: 2, lg: 3 }} color="mocha.100" bg={`rgba(24, 24, 37, ${transparency})`}>
 					<Link href="/" passHref>
 						<Logo>
 							<img src="./logo.svg" alt="logo" />

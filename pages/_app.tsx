@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ChakraProvider theme={theme}>
-      <Navbar />
+      <Navbar/>
       <Component {...pageProps} />
     </ChakraProvider>)
 }

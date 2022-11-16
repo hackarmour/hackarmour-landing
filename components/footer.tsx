@@ -1,11 +1,15 @@
-import { IconButton, Flex } from "@chakra-ui/react";
+import { IconButton, Flex, Box } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaNewspaper, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
 	return (
-		<div
+		<Box 
 			id="contact"
-			style={{ textAlign: "center", width: "100%", padding: 2.5 + "rem" }}
+			textAlign="center"
+			width="100%"
+			padding="2.5rem"
+			bg="mocha.700"
+			color="mocha.100"
 		>
 			<Flex alignItems="center" justifyContent="center" fontSize="1.2rem">
 				<br />
@@ -24,7 +28,7 @@ const Footer = () => {
 			<a className="bold-fira" href="mailto:staff@hackarmour.com">
 				staff@hackarmour.com
 			</a>
-		</div>
+		</Box>
 	);
 };
 

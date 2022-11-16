@@ -21,7 +21,7 @@ const Home: NextPage = () => {
             height="100vh" 
           >
             <Heading className="bold">
-              Welcome To <Break /> Hackarmour
+              Welcome To<Break />Hackarmour
             </Heading>
             <br />
             <Description className="text">
@@ -35,6 +35,7 @@ const Home: NextPage = () => {
                 color="mocha.900"
                 _hover={{ bg: 'blue.400' }}
                 fontSize={{ lg: "1.3rem", md: "1rem" }}
+                marginTop="1rem"
               >Learn More</Button>
             </Link>
           </Flex>
@@ -49,6 +50,7 @@ const Hero = styled.main`
   text-align: center;
   height: 100vh;
   padding: 2.5%;
+  background: radial-gradient(circle at center,#1e1e2e  0%, #11111b 100%);
 `
   
   const Break = styled.br`
