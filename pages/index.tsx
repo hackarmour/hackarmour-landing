@@ -21,7 +21,7 @@ const Home: NextPage = () => {
             height="100vh" 
           >
             <Heading className="bold">
-              Welcome To<Break />Hackarmour
+              Welcome To<Break/> Hackarmour
             </Heading>
             <br />
             <Description className="text">
@@ -50,20 +50,14 @@ const Hero = styled.main`
   text-align: center;
   height: 100vh;
   padding: 2.5%;
+  overflow: hidden;
   background: radial-gradient(circle at center,#1e1e2e  0%, #11111b 100%);
 `
   
-  const Break = styled.br`
-  @media all and (max-width: 62rem) {
-    display: none;
-  }
-  `
-  
-  const Container = styled.div`
-  padding-top: 17vh;
-  @media all and (max-width: 62rem) {
-    paddding-top: 0.5vh;
-  }
+const Break = styled.br`
+@media all and (max-width: 62rem) {
+  display: none;
+}
 `
 
 const Heading = styled.h1`
@@ -71,13 +65,8 @@ const Heading = styled.h1`
   background: linear-gradient(#fff, #96b4ec);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  white-space: pre-wrap !important;
   @media all and (max-width: 62rem) {
-    font-size: 3rem;
-  }
-
-  @media all and (max-width: 23.5rem) {
-    font-size: 2.55rem;
+    font-size: 2rem;
   }
 `
 
