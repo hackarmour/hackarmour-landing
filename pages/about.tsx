@@ -97,7 +97,7 @@ const About: NextPage = () => {
               for everyone. We are working on a search engine, which only
               indexes cybersecurity content like CVEs and exploits from different places 
               such as GitHub, Reddit and ExpoitDB, aggregating all of them 
-              in one place.{" "}
+              in one place.
               <br />
               <br />
               <p>
@@ -112,7 +112,7 @@ const About: NextPage = () => {
           <Content>
             <Content_Heading className="bold-fira">Our Team</Content_Heading>
             <Content_Description className="text-2">
-             We are students, cybersec enthusiasts and developers who believe in opensource and free distribution of knowledge and resources about the art of hacking. We are                  open to public contributions and welcome people who want to be a part of our team. All our guides and resources will be available to contribute on GitHub, and our                community is currently active on Discord. If you are an infosec aficionado and want to help us, feel free to contact us!
+             We are students, cybersec enthusiasts and developers who believe in opensource and free distribution of knowledge and resources about the art of hacking. We are open to public contributions and welcome people who want to be a part of our team. All our guides and resources will be available to contribute on GitHub, and our community is currently active on Discord. If you are an infosec aficionado and want to help us, please go through the<a href="https://github.com/hackarmour/contribution-guidelines">contribution page.</a>
             </Content_Description>
             <br />
             <MainStaff>
