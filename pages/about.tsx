@@ -97,7 +97,8 @@ const About: NextPage = () => {
               for everyone. We are working on a search engine, which only
               indexes cybersecurity content like CVEs and exploits from different places 
               such as GitHub, Reddit and ExpoitDB, aggregating all of them 
-              in one place.
+              in one place. 
+              Please go through <a href="https://hackarmour.github.io/whitepaper/Hackarmour.pdf">Our Whitepaper</a> for a more detailed description and working of the search engine.
               <br />
               <br />
               <p>
