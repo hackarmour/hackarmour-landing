@@ -64,7 +64,7 @@ const Navbar = () => {
 							{ctf ? (
 								<u>
 									<a
-										href="https://ctftime.org/event/1622"
+										href="https://odyssey.hackarmour.com/"
 										target="_blank"
 										rel="noreferrer"
 									>
